@@ -1,6 +1,13 @@
 # CyberCheatSheets
 Reference Sheets / Notes of techniques learned
 
+## Enumeration:
++ <b>Samba - Shares & Users</b>
+```
+nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse 192.168.0.1
+```
+
+
 ## Reverse Shells:
 
 + <b>Netcat - Listener</b>
