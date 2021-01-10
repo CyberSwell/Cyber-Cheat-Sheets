@@ -23,10 +23,11 @@ Stabilizing/ Upgrading Shells:
 
 + <b>Using Ptyhon</b>
 ```
-Upgrade:
+Upgrading:
 python -c ‘import pty;pty.spawn(“/bin/bash”)’
 $export TERM=xterm
-Stablize:
+
+Stablizing:
 $^Z
 $stty raw -echo; fg
 (ENTER)
