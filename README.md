@@ -56,6 +56,10 @@ $stty raw -echo; fg
 
 *Check if `/bin/systemcl` is exploitable*
 ```
+find / -perm -u=s -type f 2>/dev/null
+```
+or
+```
 find / -perm -4000 2>/dev/null
 ```
 
