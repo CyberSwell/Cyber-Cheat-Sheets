@@ -56,6 +56,12 @@ $stty raw -echo; fg
 ps -aux | grep root
 ```
 
++ <b>Check for world writable files</b>
+
+```
+find / -perm -2 -type f 2>/dev/null
+```
+
 
 + <b>`/bin/systemctl` SUID</b>
 
