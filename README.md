@@ -51,6 +51,11 @@ $stty raw -echo; fg
 
 
 ## Privilege Escalation:
++ <b>`Check for processes runnign as root` SUID</b>
+```
+ps -aux | grep root
+```
+
 
 + <b>`/bin/systemctl` SUID</b>
 
