@@ -51,6 +51,11 @@ $stty raw -echo; fg
 
 
 ## Privilege Escalation:
++ <b>Add '.' to $PATH</b>
+```
+PATH=.:${PATH}
+```
+
 + <b>Check for processes running as root</b>
 ```
 ps -aux | grep root
