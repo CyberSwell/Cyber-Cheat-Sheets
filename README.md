@@ -67,7 +67,7 @@ run
 sysinfo
 ```
 
-+ <b>Get System Info (standard shell)</b>
++ <b>Get System Info (standard shell) *look for hotfixes*</b>
 ```
 systeminfo
 ```
