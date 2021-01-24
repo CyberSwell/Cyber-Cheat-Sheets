@@ -15,6 +15,10 @@ nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount 192.168.0.1
 ## Web Apps:
 + <b>Check for vhost routing, modify /etc/hosts</b>
 + <b>.php files may have .bak (backup)</b>
++ <b>RCE via PHP Unserialize</b>
+```
+https://notsosecure.com/remote-code-execution-via-php-unserialize/
+```
 
 ## Reverse Shells:
 
