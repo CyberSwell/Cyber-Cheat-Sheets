@@ -101,6 +101,12 @@ sysinfo
 systeminfo
 ```
 
+## Enumeration:
++ <b>LinPEAS</b>
+```
+https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS
+```
+
 
 ## Privilege Escalation:
 
