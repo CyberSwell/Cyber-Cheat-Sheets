@@ -58,4 +58,4 @@ Syntax: ```nikto -h [http(s)://ipaddress]```
 **gobuster:** Personally preferred over dirbuster & dir. Directory busting tool.
 Syntax: `gobuster dir -u [url] -w [wordlist]
 - Recommended: SecLists (https://github.com/danielmiessler/SecLists) 
-- ```gobuster dir -u [url] -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3.big/medium/small.txt```
+- ```gobuster dir -u [url] -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt```
