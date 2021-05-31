@@ -46,5 +46,12 @@ script scanning, and traceroute.
 ##  Notable Ports:
 - **22:** Commonly SSH. Not typically an attack vector, but may indicate credentials could be found on host.
 - **80, 8080, 443:** Commonly HTTP & HTTPS. Indicates a web application may be available on the host, or at minimum a web service.
-- **139, 445** Commonly SMB shares, historically many exploits (ex: MS17-010)
+- **139, 445** Commonly SMB shares, historically many exploits that can lead to RCE(ex: MS17-010)
 - **111, 135:** Commonly RPC. 
+
+## Tools - Web Apps:
+**nikto:** Web vulnerability scanner, can provide preliminary points of interest but may not be effective against Web Application Firewalls (WAF's) and well-secured web apps.
+
+Syntax: ```nikto -h [http(s)://IP]```
+
+
