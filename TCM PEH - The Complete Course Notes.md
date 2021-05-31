@@ -25,7 +25,6 @@ Syntax:```netdiscover -r [CIDR range]```
 
 **nmap:** Network scanning utility, capable of enumerating services running on host along with OS information.
 Syntax: ```nmap -[options] [target]```
-- Suggested Scans:
+Suggested Scans:
+- ```nmap -sn [target]``` Ping scan, checks for live hosts but does not enumerate ports.
 
-Ping scan, checks for live hosts but does not enumerate ports.
-```nmap -sn [target]```
