@@ -7,10 +7,14 @@
 ### Goals:
 - Find specific subdomains of interest
   - ex: zoom.domain.com, dev.domain.com, mail.domain.com, vpn.domain.com
+
 ### Tools:
 **sublist3r:** Looks through DNS records and search engines
+
 Syntax: ```sublist3r -d [domain]```
+
 **crt.sh:** Uses certificate fingerprinting, gives list of certificates registered to a domain.
+
 **OWASP Amass:** https://github.com/OWASP/Amass
 
 # 2: Scanning & Enumeration
