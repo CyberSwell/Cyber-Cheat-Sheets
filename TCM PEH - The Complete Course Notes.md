@@ -26,7 +26,9 @@ Syntax:```netdiscover -r [CIDR range]```
 **nmap:** Network scanning utility, capable of enumerating services running on host along with OS information.
 Syntax: ```nmap -[options] [target]```
 Suggested Scans:
-- ```nmap -sn [target]``` Disables port scanning, only checks whether host is alive or not.
+- ```nmap -sn [target]```**:** Disables port scanning, only checks whether host is alive or not.
   -  Append with ```-o targets.txt | grep "report" | cut -d " " -f 5 > liveTargets.txt``` to create list of live IP addresses at a point in time.
-- ```nmap 
-
+- ```nmap -sS [target]```**:** Performs basic service detection on a target's 1000 most _statistically_ common ports.
+- ```nmap -sV -p [ports] [target]```**:** Performs version detection on ports specified. Ignoring known closed ports can significantly speed up scan times.
+- ```nmap -A -p [ports] [target]```**:** Performs an aggressive scan involving service detection, version detection, OS fingerprinting, 
+script scanning, and traceroute. 
