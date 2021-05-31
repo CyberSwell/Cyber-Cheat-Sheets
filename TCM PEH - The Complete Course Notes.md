@@ -56,6 +56,6 @@ Syntax: ```nikto -h [http(s)://ipaddress]```
 - Look for anything hinting at outdated versions, RCE, or overflows.
 
 **gobuster:** Personally preferred over dirbuster & dir. Directory busting tool.
-Syntax: `gobuster dir -u [url] -w [wordlist]
+Syntax: ```gobuster dir -u [url] -w [wordlist]```
 - Recommended: SecLists (https://github.com/danielmiessler/SecLists) 
   - ```gobuster dir -u [url] -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt```
