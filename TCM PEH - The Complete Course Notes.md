@@ -12,5 +12,5 @@
 ```
 sublist3r -d [domain]
 ```
-
 2. **crt.sh:** Uses certificate fingerprinting, gives list of certificates registered to a domain.
+3. **OWASP Amass:** https://github.com/OWASP/Amass
