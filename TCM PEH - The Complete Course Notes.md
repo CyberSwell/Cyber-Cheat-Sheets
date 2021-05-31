@@ -53,7 +53,7 @@ script scanning, and traceroute.
 ## Tools - Web Apps:
 **nikto:** Web vulnerability scanner, can provide preliminary points of interest but may not be effective against Web Application Firewalls (WAF's) and well-secured web apps.
 
-Syntax: ```nikto -h [http(s)://ipaddress]```
+Syntax: ```nikto -h [url]```
 - Look for anything hinting at outdated versions, RCE, or overflows.
 
 **gobuster:** Personally preferred over dirbuster & dir. Directory busting tool.
