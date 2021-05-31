@@ -1,9 +1,9 @@
 # 1: Information Gathering
-## 1.1: Email Gathering Tools
+##  1.1: Email Gathering Tools
 - theharvester
 - hunter.io
 
-## 1.2: Subdomains
+##  1.2: Subdomains
 ### Goals:
 - Find specific subdomains of interest
   - ex: zoom.domain.com, dev.domain.com, mail.domain.com, vpn.domain.com
@@ -16,4 +16,8 @@ sublist3r -d [domain]
 - **OWASP Amass:** https://github.com/OWASP/Amass
 
 # 2: Scanning & Enumeration
-##  1.1: Nmap
+##  Tools:
+**arp-scan:** Layer 2 Scanning with ARP requests
+```
+arp-scan -l
+```
