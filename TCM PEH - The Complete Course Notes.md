@@ -31,7 +31,7 @@ Syntax:```netdiscover -r [CIDR range]```
 Syntax: ```nmap -[options] [target]```
 
 Suggested Scans:
-- ```nmap -sn [target]```**:** Disables port scanning, only checks whether host is alive or not.
+- ```nmap -sn [target]```**:** Disables port scanning, and instead only checks whether host is alive or not.
   -  Append with ```-o targets.txt | grep "report" | cut -d " " -f 5 > liveTargets.txt``` to create list of live IP addresses at a point in time.
 - ```nmap -sS [target]```**:** Performs basic service detection on a target's 1000 most _statistically_ common ports.
 - ```nmap -sV -p [ports] [target]```**:** Performs version detection on ports specified. Ignoring known closed ports can significantly speed up scan times.
