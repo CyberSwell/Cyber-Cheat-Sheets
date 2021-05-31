@@ -37,3 +37,7 @@ Suggested Scans:
 - ```nmap -sV -p [ports] [target]```**:** Performs version detection on ports specified. Ignoring known closed ports can significantly speed up scan times.
 - ```nmap -A -p [ports] [target]```**:** Performs an aggressive scan involving service detection, version detection, OS fingerprinting, 
 script scanning, and traceroute. 
+- ```nmap -sS -p- [target]```**:** Scans all TCP ports of all hosts on a network. Useful to check for services running on non-standard ports.
+  -  Consider using target list with ```nmap -sS -p- -iL liveHosts.txt```
+- ```nmap -sU -p [target]```**:** Begin enumerating UDP ports. Consider using live hosts list.
+- ```nmap -sU -p- [target]```**:** Check all UDP ports. Consider using live hosts list.
