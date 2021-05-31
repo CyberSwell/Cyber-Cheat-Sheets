@@ -18,17 +18,13 @@ sublist3r -d [domain]
 # 2: Scanning & Enumeration
 ##  Tools:
 **arp-scan:** Layer 2 Scanning with ARP requests
-```
-arp-scan -l
-```
+Syntax: ```arp-scan -l```
+
 **netdiscover:** Uses ARP protocol to discover hosts on a subnet, similar to arp-scan.
-```
-netdiscover -r [CIDR range]
-```
-**nmap:**
-```
-nmap -[options] [target]
-```
+Syntax:```netdiscover -r [CIDR range]```
+
+**nmap:** Network scanning utility, capable of enumerating services running on host along with OS information.
+Syntax: ```nmap -[options] [target]```
 - Suggested Scans:
 Ping scan, checks for live hosts but does not enumerate ports.
 ```nmap -sn [target]```
