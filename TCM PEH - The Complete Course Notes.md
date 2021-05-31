@@ -17,7 +17,7 @@ Syntax: ```sublist3r -d [domain]```
 
 **OWASP Amass:** https://github.com/OWASP/Amass
 
-# 2: Scanning & Enumeration
+# 2a: Scanning
 ##  Tools:
 **arp-scan:** Layer 2 Scanning with ARP requests
 
@@ -41,3 +41,10 @@ script scanning, and traceroute.
   -  Consider using target list with ```nmap -sS -p- -iL liveHosts.txt```
 - ```nmap -sU -p [target]```**:** Begin enumerating UDP ports. Consider using live hosts list.
 - ```nmap -sU -p- [target]```**:** Check all UDP ports. Consider using live hosts list.
+
+# 2b: Enumeration
+##  Notable Ports:
+- **22:** Commonly SSH. Not typically an attack vector, but may indicate credentials could be found on host.
+- **80, 8080, 443:** Commonly HTTP & HTTPS. Indicates a web application may be available on the host, or at minimum a web service.
+- **139, 445** Commonly SMB shares, historically many exploits (ex: MS17-010)
+- **111, 135:** Commonly RPC. 
