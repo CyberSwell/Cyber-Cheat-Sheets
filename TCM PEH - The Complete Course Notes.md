@@ -21,3 +21,11 @@ sublist3r -d [domain]
 ```
 arp-scan -l
 ```
+**netdiscover:** Uses ARP protocol to discover hosts on a subnet, similar to arp-scan.
+```
+netdiscover -r [CIDR range]
+```
+**nmap:**
+```
+nmap -[options] [target]
+```
