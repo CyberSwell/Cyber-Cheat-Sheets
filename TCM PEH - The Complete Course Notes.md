@@ -29,3 +29,6 @@ netdiscover -r [CIDR range]
 ```
 nmap -[options] [target]
 ```
+- Suggested Scans:
+Ping scan, checks for live hosts but does not enumerate ports.
+```nmap -sn [target]```
