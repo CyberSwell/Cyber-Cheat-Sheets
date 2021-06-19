@@ -59,3 +59,9 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
     or
     ip addr
     ```
+- Forwarding tables:
+  - Also called Content Addressable Memory (CAM) table.
+  - Kept on Switches, contain MAC address, interface, and TTL.
+    - TTL determines how long entries stay in table (since CAM table has finite size)
+  - If two hosts have the same interfaces, then most likely connected via another switch.
+  - 
