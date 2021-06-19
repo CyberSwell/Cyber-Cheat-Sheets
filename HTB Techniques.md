@@ -26,6 +26,7 @@ Open up ZAP/Burpsuite, capture the 302 response, change the status code from 302
 
 ![image](https://user-images.githubusercontent.com/34889665/120560666-1e5e2680-c3d1-11eb-8d61-7dbd590ab5e5.png)
 + <b>Check for exposed /.git directory</b> 
+
 Clone repository:
 ```bash
 wget --mirror -I .git TARGET.COM/.git/ 
