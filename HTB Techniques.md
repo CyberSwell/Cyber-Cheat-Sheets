@@ -137,7 +137,7 @@ https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/m
 + <b>/sbin/initctl</b>
 ```
 Check current status of services
-udo -u root /sbin/initctl list
+sudo -u root /sbin/initctl list
 ```
 ```
 Add this to test.conf
