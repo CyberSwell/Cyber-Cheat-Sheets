@@ -30,3 +30,5 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
   - ```ip route``` - Linux
   - ```route print``` - Windows
   - ```netstat -r``` MacOS
+
+:::
