@@ -85,3 +85,19 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
 - Processes on a host are identified with \<IP\>:\<PORT\>.
 - Ports 0-1023 are **well-known** ports.
 - IANA Port Assignments: http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml
+- Daemon: A program that runs a service (ex: Web server daemon runs Apache2 web service)
+- Check current listening ports and TCP connections:
+  - Windows:
+    ```
+    netstat -ano
+    ```
+  - Linux:
+    ```
+    netstat -tunp
+    ```
+  - \*nix:
+    ```
+    netsat -p tcp -p udp
+    lsof -n i4TCP -4 UDP
+    ```
+  - 
