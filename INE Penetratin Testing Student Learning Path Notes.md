@@ -13,6 +13,8 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
   - Host: 192.168.1.5
   - Subnet: 192.168.1.0
   - Mask: 255.255.255.0
+
+
 **IPV6**
 - Made up of 8 groups of 2 bytes (in hex) delineated with ":", 128 bits total.
 - First half is network, second half is host.
@@ -25,6 +27,8 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
   - Host: 2002:0000:0000:1200:acbd:ffff:c0a8:0101
   - Subnet: 2002:0000:0000:1200:0000:0000:0000:0000 to 2002:0000:0000:1200:ffff:ffff:ffff:ffff
   - Mask: FFFF:FFFF:FFFF:FFFF::
+
+
 **Routing**
 - Checking routing tables:
   - ```ip route``` - Linux
