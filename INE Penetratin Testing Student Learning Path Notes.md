@@ -29,7 +29,7 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
   - Mask: FFFF:FFFF:FFFF:FFFF::
 
 
-**2.2 Routing**
+### 2.2 Routing
 - Checking routing tables:
   - Linux:
     ```bash
@@ -45,3 +45,10 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
     netstat -r
     ```
 
+### 2.3 Link Layer
+- MAC addresses
+  - 6 bytes (48 bits), written in hex form.
+- Finding MAC address:
+  - Windows:
+    ```ipconfig /all```
+  - Linux:
