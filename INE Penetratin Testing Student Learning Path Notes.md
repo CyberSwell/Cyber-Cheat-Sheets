@@ -53,7 +53,7 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
     ```
     ipconfig /all
     ```
-  - Linux:
+  - Linux/*nix:
     ```
     ifconfig
     or
