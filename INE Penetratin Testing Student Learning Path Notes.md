@@ -50,5 +50,12 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
   - 6 bytes (48 bits), written in hex form.
 - Finding MAC address:
   - Windows:
-    ```ipconfig /all```
+    ```
+    ipconfig /all
+    ```
   - Linux:
+    ```
+    ifconfig
+    or
+    ip addr
+    ```
