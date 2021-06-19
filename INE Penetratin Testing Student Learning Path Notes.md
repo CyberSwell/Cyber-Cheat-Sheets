@@ -80,4 +80,8 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
         ```
         arp
         ```
-  - 
+### 2.4 TCP/UDP
+- TCP is connection-oriented, UDP connectionless.
+- Processes on a host are identified with <IP>:<PORT>.
+- Ports 0-1023 are **well-known** ports.
+- 
