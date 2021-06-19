@@ -84,4 +84,4 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
 - TCP is connection-oriented, UDP connectionless.
 - Processes on a host are identified with \<IP\>:\<PORT\>.
 - Ports 0-1023 are **well-known** ports.
-- 
+- IANA Port Assignments: http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml
