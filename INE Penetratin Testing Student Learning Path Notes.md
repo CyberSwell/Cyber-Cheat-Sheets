@@ -61,7 +61,23 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
     ```
 - Forwarding tables:
   - Also called Content Addressable Memory (CAM) table.
+  - Created as the switch obtains new data frames.
   - Kept on Switches, contain MAC address, interface, and TTL.
     - TTL determines how long entries stay in table (since CAM table has finite size)
   - If two hosts have the same interfaces, then most likely connected via another switch.
+  - Address Resolution Protocl (ARP):
+    - Sends frame to broadcast address seeking MAC address corresponding to a specific IP address.
+    - ARP cache kept on hosts
+      - Windows:
+        ```
+        arp -a
+        ```
+      - Linux:
+        ```
+        ip neighbor
+        ```
+      - \*nix:
+        ```
+        arp
+        ```
   - 
