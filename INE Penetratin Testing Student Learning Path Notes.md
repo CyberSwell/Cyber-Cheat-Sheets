@@ -1,11 +1,11 @@
 # INE Penetration Testing Student Learning Path - Notes
 This is a collection of notes taken while completing INE's "Penetration Testing Student" learning path.
 
-## Introduction
+## 1. Introduction
 >(nothing notable for me in this section)
 
-## Networking
-### IP
+## 2. Networking
+### 2.1 IP
 **IPV4** 
 - Made up of 4 bytes (octets) delineated with ".", 64 bits total
 - Contains a network prefix and host portion of IP address
@@ -29,9 +29,19 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
   - Mask: FFFF:FFFF:FFFF:FFFF::
 
 
-**Routing**
+**2.2 Routing**
 - Checking routing tables:
-  - ```ip route``` - Linux
-  - ```route print``` - Windows
-  - ```netstat -r``` MacOS
+  - Linux:
+    ```bash
+    ip route
+    ```
+    
+  - Windows:
+    ```
+    route print
+    ```
+  - MacOS:
+    ```
+    netstat -r
+    ```
 
