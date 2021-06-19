@@ -21,9 +21,9 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
   - Global Unicast - Internet-routed
   - Unique Local - Internally routable, but not routed on internet.
   - Link Local - Cannot be routed internally or externally
-- Example: 2002:0000:0000:1234:abcd:ffff:c0a8:0101/64
-  - Host: 2002:0000:0000:1234:abcd:ffff:c0a8:0101
-  - Subnet: 2002:0000:0000:1234:0000:0000:0000:0000 to 2002:0000:0000:1234:ffff:ffff:ffff:ffff
+- Example: 2002:0000:0000:1200:abcd:ffff:c0a8:0101/64
+  - Host: 2002:0000:0000:1200:abcd:ffff:c0a8:0101
+  - Subnet: 2002:0000:0000:1200:0000:0000:0000:0000 to 2002:0000:0000:1200:ffff:ffff:ffff:ffff
   - Mask: FFFF:FFFF:FFFF:FFFF::
 **Routing**
 - Checking routing tables:
@@ -31,4 +31,3 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
   - ```route print``` - Windows
   - ```netstat -r``` MacOS
 
-:::
