@@ -44,6 +44,11 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
     ```
     netstat -r
     ```
+  - Adding a route:
+    - Linux:
+      ```
+      ip route add <subnet> via <gateway>
+      ```
 
 ### 2.3 Link Layer
 - MAC addresses
@@ -100,4 +105,20 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
     netsat -p tcp -p udp
     lsof -n i4TCP -4 UDP
     ```
-  - 
+### 2.5 Firewalls and Network Defense
+- Firewalls:
+  - Three types:
+    - Packet Filtering: Takes into consideration source and destination IP address & port, along with protocol. Does not look at packet contents, and does not protect against application-layer attacks.
+      - Typically rules set to **allow**, **drop**, or **deny**
+        - Unlike **deny**, **drop** does not send a response when packet is not forwarded. 
+    - Application Level/ Deep Packet Inspection:
+      - Utilized by IDS's, checks actual packet data. Capable of identifying port scans, SQL injections, buffer overflow, etc.
+- IDS:
+  - Host based or network based (HIDS vs NIDS).
+  - NIDS typically placed within a network/ subnet where security levels differ.
+  - HIDS monitor application logs, filesystem changes, OS config changes, etc.
+- IPS:
+  - Capable of dropping packets and acting when malicious activity is detected.  
+- Spotting network defenses:
+  - No responses to TCP SYN may indicate packets dropped
+  - TCP RST/ACK response to SYN
