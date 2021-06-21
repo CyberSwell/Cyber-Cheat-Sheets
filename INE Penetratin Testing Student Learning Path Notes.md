@@ -145,7 +145,7 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
   powershell ls
   ```
 - Simple python http server:
-  ```bash
+  ``` bash
   python -m SimpleHTTPServer 8080
   ```
   
