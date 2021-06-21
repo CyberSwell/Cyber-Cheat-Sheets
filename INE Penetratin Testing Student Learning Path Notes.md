@@ -130,3 +130,23 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
   - Display filters: Filters only show certain packets obtained during the capture.
     - \<protocolname\>.[field][operand value]
     - ip.addr == 192.168.0.1
+
+### 2.7 Data Exfiltration Lab
+- https://github.com/stufus/egresscheck-framework.git
+- Can look for interesting files with:
+  ```
+  dir /s /b [filename]
+  ```
+  - The "/s" flag recurses through subdirectories during the search.
+  - The "/b" flag provides a "bare" list of directories and files.
+- Can check for scripting languages with:
+  ```
+  python --version
+  powershell ls
+  ```
+- Simple python http server:
+  ```bash
+  python -m SimpleHTTPServer 8080
+  ```
+  
+  
