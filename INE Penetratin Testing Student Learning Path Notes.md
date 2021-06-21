@@ -148,5 +148,10 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
   ``` bash
   python -m SimpleHTTPServer 8080
   ```
-  
+- Start python http server in directory for PacketWhisper (https://github.com/TryCatchHCF/PacketWhisper)
+  - May also be useful to host the zip: https://github.com/TryCatchHCF/PacketWhisper/archive/master.zip
+- Navigate to hosted python server on target machine
+- Download master.zip, extract locally.
+- On target machine, use ```python packetwhisper.py```
+- Using "Random SUbdomain FQDNs" transfer mode and "cloudfront_prefixes" cipher on the victim machine, we can put the file back together on the attacker machine by saving the pcap, using ```python packetwhisper.py``` with the second mode, and select the same ciphers.
   
