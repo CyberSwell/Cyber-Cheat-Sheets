@@ -122,3 +122,10 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
 - Spotting network defenses:
   - No responses to TCP SYN may indicate packets dropped
   - TCP RST/ACK response to SYN
+
+
+### 2.6 Wireshark
+- Filters
+  - Capture filters: Filtering occurs during the actual capture of packets.
+  - Display filters: Filters only show certain packets obtained during the capture.
+    - \<protocolname\>.[field][operand value]
