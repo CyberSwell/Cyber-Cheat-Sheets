@@ -129,3 +129,4 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
   - Capture filters: Filtering occurs during the actual capture of packets.
   - Display filters: Filters only show certain packets obtained during the capture.
     - \<protocolname\>.[field][operand value]
+    - ip.addr == 192.168.0.1
