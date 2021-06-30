@@ -161,6 +161,7 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
 ### 3.2 Subdomain Enumeration
 Goals:
 - Enumerate internet attack surface for websites that may be vulnerable to attack
+
 Techniques:
 - Google Dorking
 
