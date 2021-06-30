@@ -230,6 +230,7 @@ Techniques:
   nmap -sT [TARGET]
   ```
 - Version Detection Scan: TCP Connect scan with additional probes to enumerate application listening. Reads banner sent by daemon.
+  - ```tcpwrapped``` indicates TCP handshake was completed, but remote host closed connection without receiving any data (application protected by ```tcpwrapper``` - could be IPS or firewall)
   ``` bash
   nmap -sV [TARGET]
   ```
