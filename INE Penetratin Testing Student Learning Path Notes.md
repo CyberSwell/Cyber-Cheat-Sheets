@@ -162,7 +162,7 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
 Goals:
 - Enumerate internet attack surface for websites that may be vulnerable to attack
 
-Techniques:
+Passive Techniques:
 - Google Dorking
   - ```site: domain.com```
 - Websites:
@@ -171,4 +171,20 @@ Techniques:
   ``` bash
   sublist3r -d domain.com
   ```
+- "Certificate Subject Alt Name" field of SSL Certificate
 
+Active Techniques
+- Gobuster
+  ``` bash
+  gobuster dir -u [url] -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt
+  ```
+- Amass
+  - https://github.com/OWASP/Amass/blob/master/doc/user_guide.md
+  ``` bash
+  sudo apt install snapd
+  snapd install amass
+  amass
+  ```
+  
+## 4. Footprinting & Scanning
+### 
