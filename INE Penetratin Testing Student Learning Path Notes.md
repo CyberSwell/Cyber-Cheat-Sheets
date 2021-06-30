@@ -163,9 +163,11 @@ Goals:
 - Enumerate internet attack surface for websites that may be vulnerable to attack
 Techniques:
 - Google Dorking
-  -```site: domain.com```
+
+  - ```site: domain.com```
 - Websites:
-  -```dnsdumpster.com```, ```crt.sh```
+
+  - ```dnsdumpster.com```, ```crt.sh```
 - Sublist3r
   ``` bash
   sublist3r -d domain.com
