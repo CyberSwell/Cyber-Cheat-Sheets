@@ -159,6 +159,8 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
 ### 3.1 OSINT
 
 ### 3.2 Subdomain Enumeration
+Goals:
+- Enumerate internet attack surface for websites that may be vulnerable to attack
 Techniques:
 - Google Dorking
   -```site: domain.com```
@@ -168,3 +170,4 @@ Techniques:
   ``` bash
   sublist3r -d domain.com
   ```
+
