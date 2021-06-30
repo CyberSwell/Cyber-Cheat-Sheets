@@ -161,10 +161,10 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
 ### 3.2 Subdomain Enumeration
 Techniques:
 - Google Dorking
-- 
+  -
   ```site: domain.com```
 - Dns Dumpster
-- 
+  -
   ```dnsdumpster.com```
 - Sublist3r
   ``` bash
