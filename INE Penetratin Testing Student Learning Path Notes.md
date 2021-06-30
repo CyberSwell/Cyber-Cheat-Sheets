@@ -155,3 +155,16 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
 - On target machine, use ```python packetwhisper.py```
 - Using "Random SUbdomain FQDNs" transfer mode and "cloudfront_prefixes" cipher on the victim machine, we can put the file back together on the attacker machine by saving the pcap, using ```python packetwhisper.py``` with the second mode, and select the same ciphers.
   
+## 3. Information Gathering
+### 3.1 OSINT
+
+### 3.2 Subdomain Enumeration
+Techniques:
+- Google Dorking
+  ```site: domain.com```
+- Dns Dumpster
+  ```dnsdumpster.com```
+- Sublist3r
+  ``` bash
+  sublist3r -d domain.com
+  ```
