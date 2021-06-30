@@ -187,4 +187,51 @@ Active Techniques
   ```
   
 ## 4. Footprinting & Scanning
-### 
+### 4.1 Mapping Networks
+Goals:
+- Determine in-scope and out-of-scope devices
+- Identify in-scope subnet topologies
+
+Techniques:
+- Ping Sweeping: Send ICMP Type 8 (echo request) to host, response indicates host is alive
+  ``` bash
+  fping -a -g [IP RANGE]
+  -a: only show alive hosts
+  -g: ping sweep, not normal ping
+  ```
+- Nmap: -sn flag for ping sweeping.
+  ``` bash
+  nmap -sn [IP RANGE]
+  OR
+  nmap -sn -iL hostlist.txt
+  ```
+### 4.2 OS Fingerprinting
+- Different OS's have different implementation of network stack.
+- Signatures of responses to requests can be compared to a databse of known OS signatures.
+Techniques:
+- Nmap: -Pn flag to skip ping scan, -O for OS discovery.
+  ``` bash
+  nmap -Pn -O [targets]
+  ```
+
+### 4.3 Port Scanning
+Goals:
+- Enumerate daemons and services running on network nodes
+- Look for ACK flag for open port, RST + ACK For closed port
+Techniques:
+- TCP SYN Scan: SYN sent, SYN + ACK received if port open, RST sent back to avoid full connection.
+  - Daemon does not log connection
+  ``` bash
+  nmap -sS [TARGET]
+  (NOTE: nmap uses -sS by default)
+  ```
+- TCP Connect: Full TCP connection made
+  ``` bash
+  nmap -sT [TARGET]
+  ```
+- Version Detection Scan: TCP Connect scan with additional probes to enumerate application listening. Reads banner sent by daemon.
+  ``` bash
+  nmap -sV [TARGET]
+  ```
+- Specifying Ports: ```-p``` flag, with port range specified as comma separated list (ex: ```-p 80,443,8080```) or an interval (ex: ```-p 1-65535```)
+
