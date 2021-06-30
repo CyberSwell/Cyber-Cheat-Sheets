@@ -164,8 +164,8 @@ Goals:
 Techniques:
 - Google Dorking
   -```site: domain.com```
-- Dns Dumpster
-  -```dnsdumpster.com```
+- Websites:
+  -```dnsdumpster.com```, ```crt.sh```
 - Sublist3r
   ``` bash
   sublist3r -d domain.com
