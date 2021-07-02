@@ -1,16 +1,17 @@
-# INE Penetration Testing Student Learning Path - Notes
-This is a collection of notes taken while completing INE's "Penetration Testing Student" learning path.
+# INE Penetration Testing Student Learning Path - Notes  
+This is a collection of notes taken while completing INE's "Penetration Testing Student" learning path.  
 
 # Table of Contents:
-Background Information:
-[I. Introduction](#i-introduction)
-[II. Networking](#i-networking)
-Penetration Testing Lifecycle:
-[1. Information Gathering](#1-information-gathering)
-[2. Footprinting & Scanning](#2-footprinting--scanning)
+Background Information:  
+[I. Introduction](#i-introduction)  
+[II. Networking](#i-networking)  
+
+Penetration Testing Lifecycle:  
+[1. Information Gathering](#1-information-gathering)  
+[2. Footprinting & Scanning](#2-footprinting--scanning)  
 
 ## I. Introduction
->(nothing notable for me in this section)
+>(nothing notable for me in this section)  
 
 ## II. Networking
 ### II.1 IP
@@ -42,36 +43,35 @@ Penetration Testing Lifecycle:
   - Linux:
     ```bash
     ip route
-    ```
-    
+    ```  
   - Windows:
     ```
     route print
-    ```
+    ```  
   - MacOS:
     ```
     netstat -r
-    ```
+    ```  
   - Adding a route:
-    - Linux:
+    - Linux:  
       ```
       ip route add <subnet> via <gateway>
       ```
 
 ### II.3 Link Layer
-- MAC addresses
+- MAC addresses  
   - 6 bytes (48 bits), written in hex form.
-- Finding MAC address:
-  - Windows:
+- Finding MAC address:  
+  - Windows:  
     ```
     ipconfig /all
-    ```
+    ```  
   - Linux/*nix:
     ```
     ifconfig
     or
     ip addr
-    ```
+    ```  
 - Forwarding tables:
   - Also called Content Addressable Memory (CAM) table.
   - Created as the switch obtains new data frames.
@@ -129,15 +129,14 @@ Penetration Testing Lifecycle:
   - Capable of dropping packets and acting when malicious activity is detected.  
 - Spotting network defenses:
   - No responses to TCP SYN may indicate packets dropped
-  - TCP RST/ACK response to SYN
-
+  - TCP RST/ACK response to SYN  
 
 ### II.6 Wireshark
 - Filters
   - Capture filters: Filtering occurs during the actual capture of packets.
   - Display filters: Filters only show certain packets obtained during the capture.
     - \<protocolname\>.[field][operand value]
-    - ip.addr == 192.168.0.1
+    - ip.addr == 192.168.0.1  
 
 ### II.7 Data Exfiltration Lab
 - https://github.com/stufus/egresscheck-framework.git
@@ -168,8 +167,7 @@ Penetration Testing Lifecycle:
 
 ### 1.2 Subdomain Enumeration
 Goals:
-- Enumerate internet attack surface for websites that may be vulnerable to attack
-
+- Enumerate internet attack surface for websites that may be vulnerable to attack.  
 Passive Techniques:
 - Google Dorking
   - ```site: domain.com```
@@ -198,7 +196,7 @@ Active Techniques
 ### 2.1 Mapping Networks
 Goals:
 - Determine in-scope and out-of-scope devices
-- Identify in-scope subnet topologies
+- Identify in-scope subnet topologies  
 
 Techniques:
 - Ping Sweeping: Send ICMP Type 8 (echo request) to host, response indicates host is alive
