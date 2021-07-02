@@ -2,7 +2,12 @@
 This is a collection of notes taken while completing INE's "Penetration Testing Student" learning path.
 
 # Table of Contents:
+Background Information:
 [I. Introduction](#i-introduction)
+[II. Networking](#i-networking)
+Penetration Testing Lifecycle:
+[1. Information Gathering](#1-information-gathering)
+[2. Footprinting & Scanning](#2-footprinting-scanning)
 
 ## I. Introduction
 >(nothing notable for me in this section)
