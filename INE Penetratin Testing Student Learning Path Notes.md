@@ -235,4 +235,7 @@ Techniques:
   nmap -sV [TARGET]
   ```
 - Specifying Ports: ```-p``` flag, with port range specified as comma separated list (ex: ```-p 80,443,8080```) or an interval (ex: ```-p 1-65535```)
-
+- Scripts:
+  - Using `--script [scriptname]` flag.
+  - The `vulners` script (invoked with `--script vulners`), provides vulnerability info similar to Nessus.
+  - https://github.com/vulnersCom/nmap-vulners
