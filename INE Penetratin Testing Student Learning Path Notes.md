@@ -168,6 +168,7 @@ Penetration Testing Lifecycle:
 ### 1.2 Subdomain Enumeration
 Goals:
 - Enumerate internet attack surface for websites that may be vulnerable to attack.  
+
 Passive Techniques:
 - Google Dorking
   - ```site: domain.com```
