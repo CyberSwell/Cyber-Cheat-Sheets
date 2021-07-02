@@ -1,11 +1,14 @@
 # INE Penetration Testing Student Learning Path - Notes
 This is a collection of notes taken while completing INE's "Penetration Testing Student" learning path.
 
-## 1. Introduction
+#Table of Contents:
+[I. Introduction](## I. Introduction)
+
+## I. Introduction
 >(nothing notable for me in this section)
 
-## 2. Networking
-### 2.1 IP
+## II. Networking
+### II.1 IP
 **IPV4** 
 - Made up of 4 bytes (octets) delineated with ".", 64 bits total
 - Contains a network prefix and host portion of IP address
@@ -29,7 +32,7 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
   - Mask: FFFF:FFFF:FFFF:FFFF::
 
 
-### 2.2 Routing
+### II.2 Routing
 - Checking routing tables:
   - Linux:
     ```bash
@@ -50,7 +53,7 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
       ip route add <subnet> via <gateway>
       ```
 
-### 2.3 Link Layer
+### II.3 Link Layer
 - MAC addresses
   - 6 bytes (48 bits), written in hex form.
 - Finding MAC address:
@@ -85,7 +88,7 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
         ```
         arp
         ```
-### 2.4 TCP/UDP
+### II.4 TCP/UDP
 - TCP is connection-oriented, UDP connectionless.
 - Processes on a host are identified with \<IP\>:\<PORT\>.
 - Ports 0-1023 are **well-known** ports.
@@ -105,7 +108,7 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
     netsat -p tcp -p udp
     lsof -n i4TCP -4 UDP
     ```
-### 2.5 Firewalls and Network Defense
+### II.5 Firewalls and Network Defense
 - Firewalls:
   - Three types:
     - Packet Filtering: Takes into consideration source and destination IP address & port, along with protocol. Does not look at packet contents, and does not protect against application-layer attacks.
@@ -124,14 +127,14 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
   - TCP RST/ACK response to SYN
 
 
-### 2.6 Wireshark
+### II.6 Wireshark
 - Filters
   - Capture filters: Filtering occurs during the actual capture of packets.
   - Display filters: Filters only show certain packets obtained during the capture.
     - \<protocolname\>.[field][operand value]
     - ip.addr == 192.168.0.1
 
-### 2.7 Data Exfiltration Lab
+### II.7 Data Exfiltration Lab
 - https://github.com/stufus/egresscheck-framework.git
 - Can look for interesting files with:
   ```
@@ -155,10 +158,10 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
 - On target machine, use ```python packetwhisper.py```
 - Using "Random SUbdomain FQDNs" transfer mode and "cloudfront_prefixes" cipher on the victim machine, we can put the file back together on the attacker machine by saving the pcap, using ```python packetwhisper.py``` with the second mode, and select the same ciphers.
   
-## 3. Information Gathering
-### 3.1 OSINT
+## 1. Information Gathering
+### 1.1 OSINT
 
-### 3.2 Subdomain Enumeration
+### 1.2 Subdomain Enumeration
 Goals:
 - Enumerate internet attack surface for websites that may be vulnerable to attack
 
@@ -186,8 +189,8 @@ Active Techniques
   amass
   ```
   
-## 4. Footprinting & Scanning
-### 4.1 Mapping Networks
+## 2. Footprinting & Scanning
+### 2.1 Mapping Networks
 Goals:
 - Determine in-scope and out-of-scope devices
 - Identify in-scope subnet topologies
@@ -205,7 +208,7 @@ Techniques:
   OR
   nmap -sn -iL hostlist.txt
   ```
-### 4.2 OS Fingerprinting
+### 2.2 OS Fingerprinting
 - Different OS's have different implementation of network stack.
 - Signatures of responses to requests can be compared to a databse of known OS signatures.
 Techniques:
@@ -214,7 +217,7 @@ Techniques:
   nmap -Pn -O [targets]
   ```
 
-### 4.3 Port Scanning
+### 2.3 Port Scanning
 Goals:
 - Enumerate daemons and services running on network nodes
 - Look for ACK flag for open port, RST + ACK For closed port
