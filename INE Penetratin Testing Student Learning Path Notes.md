@@ -196,7 +196,7 @@ Active Techniques
 ### 2.1 Mapping Networks
 Goals:
 - Determine in-scope and out-of-scope devices
-- Identify in-scope subnet topologies  
+- Identify in-scope subnet topologies\  
 Techniques:
 - Ping Sweeping: Send ICMP Type 8 (echo request) to host, response indicates host is alive
   ``` bash
