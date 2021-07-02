@@ -2,7 +2,7 @@
 This is a collection of notes taken while completing INE's "Penetration Testing Student" learning path.
 
 #Table of Contents:
-[I. Introduction](## I. Introduction)
+- [I. Introduction](## I. Introduction)
 
 ## I. Introduction
 >(nothing notable for me in this section)
