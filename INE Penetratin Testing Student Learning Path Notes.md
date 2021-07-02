@@ -264,7 +264,14 @@ Techniques:
   - https://github.com/vulnersCom/nmap-vulners
   
 ## 3. Vulnerability Assessment
-  
+Goals:
+- Discover known vulnerabilities on a system.
+- Discover service misconvigurations.
+ 
+Techniques:
+- Automated Tools:
+  - Nessus: Composed of a client, which configures scans, and server, which carries out the scans.
+    - Also sends out probes to verify if vulnerability exists
 ## 4. Exploitation
   
 ## 5. Reporting
