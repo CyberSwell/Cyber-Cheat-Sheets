@@ -9,6 +9,9 @@ Background Information:
 Penetration Testing Lifecycle:  
 [1. Information Gathering](#1-information-gathering)  
 [2. Footprinting & Scanning](#2-footprinting--scanning)  
+[3. Vulnerability Assessment](#3-vulnerability-assessment)
+[4. Exploitation](#4-exploitation)
+[5. Reporting](5-reporting)
 
 ## I. Introduction
 <details>
@@ -259,3 +262,9 @@ Techniques:
   - Using `--script [scriptname]` flag.
   - The `vulners` script (invoked with `--script vulners`), provides vulnerability info similar to Nessus.
   - https://github.com/vulnersCom/nmap-vulners
+  
+## 3. Vulnerability Assessment
+  
+## 4. Exploitation
+  
+## 5. Reporting
