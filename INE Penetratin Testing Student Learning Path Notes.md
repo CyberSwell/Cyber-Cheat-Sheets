@@ -7,7 +7,7 @@ Background Information:
 [II. Networking](#i-networking)
 Penetration Testing Lifecycle:
 [1. Information Gathering](#1-information-gathering)
-[2. Footprinting & Scanning](#2-footprinting-scanning)
+[2. Footprinting & Scanning](#2-footprinting--scanning)
 
 ## I. Introduction
 >(nothing notable for me in this section)
