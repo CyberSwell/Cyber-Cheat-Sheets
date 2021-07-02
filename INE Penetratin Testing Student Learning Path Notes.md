@@ -266,7 +266,7 @@ Techniques:
 ## 3. Vulnerability Assessment
 Goals:
 - Discover known vulnerabilities on a system.
-- Discover service misconvigurations.
+- Discover service misconfigurations.
  
 Techniques:
 - Automated Tools:
