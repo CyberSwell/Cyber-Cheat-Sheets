@@ -13,7 +13,8 @@ Penetration Testing Lifecycle:
 ## I. Introduction
 <details>
   <summary>Introductory information on pentesting</summary>
->(nothing notable for me in this section)  
+  
+  >(nothing notable for me in this section)  
 </details>
   
 ## II. Networking
