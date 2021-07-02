@@ -20,6 +20,7 @@ Penetration Testing Lifecycle:
 ## II. Networking
 <details>
   <summary>Introductory information on IP, Routing, Switching, Firewalls, and IDS/IPS's</summary>
+  
   ### II.1 IP
   **IPV4** 
   - Made up of 4 bytes (octets) delineated with ".", 64 bits total
