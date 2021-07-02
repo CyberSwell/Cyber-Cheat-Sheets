@@ -12,10 +12,13 @@ Penetration Testing Lifecycle:
 
 ## I. Introduction
 <details>
+  <summary>Introductory information on pentesting</summary>
 >(nothing notable for me in this section)  
 </details>
   
 ## II. Networking
+<details>
+  <summary>Introductory information on IP, Routing, Switching, Firewalls, and IDS/IPS's</summary>
 ### II.1 IP
 **IPV4** 
 - Made up of 4 bytes (octets) delineated with ".", 64 bits total
@@ -163,7 +166,8 @@ Penetration Testing Lifecycle:
 - Download master.zip, extract locally.
 - On target machine, use ```python packetwhisper.py```
 - Using "Random SUbdomain FQDNs" transfer mode and "cloudfront_prefixes" cipher on the victim machine, we can put the file back together on the attacker machine by saving the pcap, using ```python packetwhisper.py``` with the second mode, and select the same ciphers.
-  
+  </details>
+
 ## 1. Information Gathering
 ### 1.1 OSINT
 
