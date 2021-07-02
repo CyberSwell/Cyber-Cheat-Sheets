@@ -196,7 +196,8 @@ Active Techniques
 ### 2.1 Mapping Networks
 Goals:
 - Determine in-scope and out-of-scope devices
-- Identify in-scope subnet topologies\  
+- Identify in-scope subnet topologies
+
 Techniques:
 - Ping Sweeping: Send ICMP Type 8 (echo request) to host, response indicates host is alive
   ``` bash
@@ -211,8 +212,11 @@ Techniques:
   nmap -sn -iL hostlist.txt
   ```
 ### 2.2 OS Fingerprinting
+Goals:
 - Different OS's have different implementation of network stack.
 - Signatures of responses to requests can be compared to a databse of known OS signatures.
+- Identify what OS a host is running.
+
 Techniques:
 - Nmap: -Pn flag to skip ping scan, -O for OS discovery.
   ``` bash
@@ -223,6 +227,8 @@ Techniques:
 Goals:
 - Enumerate daemons and services running on network nodes
 - Look for ACK flag for open port, RST + ACK for closed port
+
+
 Techniques:
 - TCP SYN Scan: SYN sent, SYN + ACK received if port open, RST sent back to avoid full connection.
   - Daemon does not log connection
