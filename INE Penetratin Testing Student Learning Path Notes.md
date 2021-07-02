@@ -197,7 +197,6 @@ Active Techniques
 Goals:
 - Determine in-scope and out-of-scope devices
 - Identify in-scope subnet topologies  
-
 Techniques:
 - Ping Sweeping: Send ICMP Type 8 (echo request) to host, response indicates host is alive
   ``` bash
@@ -223,7 +222,7 @@ Techniques:
 ### 2.3 Port Scanning
 Goals:
 - Enumerate daemons and services running on network nodes
-- Look for ACK flag for open port, RST + ACK For closed port
+- Look for ACK flag for open port, RST + ACK for closed port
 Techniques:
 - TCP SYN Scan: SYN sent, SYN + ACK received if port open, RST sent back to avoid full connection.
   - Daemon does not log connection
