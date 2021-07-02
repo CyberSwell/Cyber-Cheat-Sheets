@@ -9,9 +9,9 @@ Background Information:
 Penetration Testing Lifecycle:  
 [1. Information Gathering](#1-information-gathering)  
 [2. Footprinting & Scanning](#2-footprinting--scanning)  
-[3. Vulnerability Assessment](#3-vulnerability-assessment)
-[4. Exploitation](#4-exploitation)
-[5. Reporting](5-reporting)
+[3. Vulnerability Assessment](#3-vulnerability-assessment)  
+[4. Exploitation](#4-exploitation)  
+[5. Reporting](5-reporting)  
 
 ## I. Introduction
 <details>
