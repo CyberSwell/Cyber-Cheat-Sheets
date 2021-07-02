@@ -11,8 +11,10 @@ Penetration Testing Lifecycle:
 [2. Footprinting & Scanning](#2-footprinting--scanning)  
 
 ## I. Introduction
+<details>
 >(nothing notable for me in this section)  
-
+</details>
+  
 ## II. Networking
 ### II.1 IP
 **IPV4** 
