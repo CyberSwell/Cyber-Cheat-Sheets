@@ -2,7 +2,7 @@
 This is a collection of notes taken while completing INE's "Penetration Testing Student" learning path.
 
 # Table of Contents:
-I. [Example](#1.example)
+[Example](#1.example)
 
 
 ## 1.Example
