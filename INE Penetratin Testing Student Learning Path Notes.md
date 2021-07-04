@@ -287,7 +287,7 @@ Cookie Attributes:
   ```
   Set-Cookie: Username="admin"; auth=1
   ```
-- Expires: Specifies validity time window of cookie.
+- Expires: Specifies validity time window of cookie. A value of `Session` indicates cookie expires after the current browser session.
 - Path: Sets path scope of the cookie - valid for all subpaths.
 - Domain: Sets scope of the cookie - valid for all subdomains.
   - If not set, browser defaults to setting domain as server domain and enables **host-only** flag
@@ -323,6 +323,19 @@ Session Cookies:
   http://site.com/resource.php?sessid=laksf121K12
   ```
 
+### III.7 HTTP(s) Cookies and Sessions
+Techniques: 
+- Use web developer tools on Browser
+  - Console: Allows execution of javascript
+    - If cookie is not `HttpOnly`, cookie can be read with `document.cookie`, or displayed with `alert(document.cookie)`
+  - Net(work): Examine web traffic, such as HTTP requests/responses.
+  - Cookies: Examine and manipulate cookies.
+  
+### III.8 Same Origin Policy
+- Prevents JS code from getting or setting properties if the request originates from a different origin.
+- Browser uses `Protocol`, `Hostname`, and `Port` to determien if JS can access a resource.\
+> Example: A user access Webapp A, which contains a malicious JS that attempts to read data from Webmail B, which the user is already logged into. SOP prevents Webapp A's JS from being executed and reading data from Webmail B.
+  
   
 </details>  
   
