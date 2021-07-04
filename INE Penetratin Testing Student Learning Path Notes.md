@@ -190,7 +190,7 @@ HTTP Message Format:
   - Headers\r\n
   - \r\n
   - Message Body\r\n
-
+  > \r is `carriage return`, and \n is `newline` 
   
 </details>  
   
