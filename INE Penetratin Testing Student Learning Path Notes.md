@@ -308,6 +308,22 @@ GET /resource HTTP/1.1
 Cookie: ValName=...
 ```
   
+### III.6 Sessions
+- Sessions can be stored either server-side or client-side.
+- Upon giving identification of a session, server can retrieve previous state of the client. 
+Session Cookies:
+- Typically contain single parameter value pair that refers to the session
+  ```
+  SESSION=a76s6dfa871DSq
+  ```
+> PHP may install session cookies with `PHPSESSID` parameter name, and JSP websites may use `JSESSIONID` parameter name.
+- Typically after browser opens a specific page, changes a setting in the webapp, or logs in.
+- May also be transmitted in `GET` requests
+  ```
+  http://site.com/resource.php?sessid=laksf121K12
+  ```
+
+  
 </details>  
   
   
