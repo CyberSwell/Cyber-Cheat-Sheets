@@ -276,6 +276,38 @@ Techniques:
 - Using Burpsuite/ OWASP ZAP to analyze HTTPS requests and responses:
   - Same thing as HTTP, but you ensure you specify the correct port and that HTTPS is used. V easy.
   
+### III.5 HTTP Cookies:
+- RFC6265
+- HTTP is a stateless protocol, and cookies help to keep state.
+- **Cookie Jar**: Where a web browser stores cookies.
+- Set by servers with `Set-Cookie` HTTP header in a response
+Cookie Attributes:
+- Actual content: Set with `Set-Cookie` header by server
+  - Contains multiple key-value pairs
+  ```
+  Set-Cookie: Username="admin"; auth=1
+  ```
+- Expires: Specifies validity time window of cookie.
+- Path: Sets path scope of the cookie - valid for all subpaths.
+- Domain: Sets scope of the cookie - valid for all subdomains.
+  - If not set, browser defaults to setting domain as server domain and enables **host-only** flag
+- Optional Flags:
+  - "HTTPOnly" attribute: Prevents Javascript, FLash, Java, and anything that is not HTML from reading the cookie
+    - Prevents cookie stealing via XSS
+  - "Secure" attribute: Cookies will only be sent over HTTPS.
+  - "HostOnly" flag: Cookie only sent to a specific, precise hostname (no subdomains).
+> A browser will only send cookies if the domain, path, and expiry check out. 
+  
+Cookies in Authentication:
+- Browser sends POST request with username and password.
+- Server sends response with `Set-Cookie` header field, along with cookie details.
+- For subsequent requests, browser considers `Expires`, `Path`, and `Domain` before including a `Cookie" header in request.
+```
+GET /resource HTTP/1.1
+...
+Cookie: ValName=...
+```
+  
 </details>  
   
   
