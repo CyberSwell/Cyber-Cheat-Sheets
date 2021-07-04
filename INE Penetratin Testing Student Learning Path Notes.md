@@ -250,6 +250,10 @@ Techniques:
   </body>
   </html>
   ```
+  > Instead of `GET`, you can use other HTTP methods, such as `OPTIONS`, in order to enumerate what HTTP methods are available for a request.
+  > You can also specify multiple fields in the request, and just hit `enter` twice once you are done crafting the request.
+
+  
   
 </details>  
   
