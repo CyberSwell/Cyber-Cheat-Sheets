@@ -301,7 +301,7 @@ Cookie Attributes:
 Cookies in Authentication:
 - Browser sends POST request with username and password.
 - Server sends response with `Set-Cookie` header field, along with cookie details.
-- For subsequent requests, browser considers `Expires`, `Path`, and `Domain` before including a `Cookie" header in request.
+- For subsequent requests, browser considers `Expires`, `Path`, and `Domain` before including a `Cookie` header in request.
 ```
 GET /resource HTTP/1.1
 ...
