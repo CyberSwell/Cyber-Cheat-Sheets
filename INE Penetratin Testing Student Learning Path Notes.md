@@ -192,7 +192,7 @@ HTTP Message Format:
   - Message Body\r\n
   > \r is `carriage return`, and \n is `newline` 
   
-HTTP Requests:
+HTTP Request Headers:
 - Request method: states type of request
 - Path and protocol version
 - Host: URI of the resource
@@ -202,10 +202,9 @@ HTTP Requests:
 - Accept-Encoding: Accepted encoding of the document, such as `gzip, deflate`.
 - Connection: Whether future communications will reuse current connection, or will require another TCP connection to be established.
 
-HTTP Responses:
+HTTP Response Headers:
 - Status-Line: Protocol version, status code, and textual meaning of status code.
 - Date
-- Headers: May include headers such as `Cache-Control`
 - Content-Type: The type of content included in the response.
 - Content-Encoding: How the content of the response is encoded
 - Server: Header of the server that generated the content (ex: Apache)
@@ -251,9 +250,31 @@ Techniques:
   </html>
   ```
   > Instead of `GET`, you can use other HTTP methods, such as `OPTIONS`, in order to enumerate what HTTP methods are available for a request.
-  > You can also specify multiple fields in the request, and just hit `enter` twice once you are done crafting the request.
+  > You can also specify multiple headers in the request, and just hit `enter` twice once you are done crafting the request.
 
+- Using Burpsuite/ OWASP ZAP to analyze HTTP requests and responses:
+  - Open up "Repeater" tool, specify target, and craft request before sending it off.
   
+  
+### III.4 Analyzing HTTPS Connections:
+Techniques:
+- Use **openssl** to initiate TCP handshake for HTTPS
+  ``` console
+  foobar@kali:~$ openssl s_client -connect thon.org:443
+  depth=2 C = US, ST = New Jersey, L = Jersey City, O = The USERTRUST Network, CN = USERTrust RSA Certification Authority
+  verify return:1
+  depth=1 C = US, ST = MI, L = Ann Arbor, O = Internet2, OU = InCommon, CN = InCommon RSA Server CA
+  verify return:1
+  depth=0 C = US, ST = Pennsylvania, L = University Park, O = The Pennsylvania State University, OU = VM Hosting Consulting, CN = thon.org
+  verify return:1
+  GET / HTTP/1.1
+  Host: thon.org
+  ```
+  > The `-quiet` flag surpresses information about the SSL certificate exchange. Information about ceritificate exchange and session keys can be viewed by omitting the `-quiet` flag. More information can be shown with `-debug`. You can keep tabs on the state of the handshake with `-state`.
+  
+
+- Using Burpsuite/ OWASP ZAP to analyze HTTPS requests and responses:
+  - Same thing as HTTP, but you ensure you specify the correct port and that HTTPS is used. V easy.
   
 </details>  
   
