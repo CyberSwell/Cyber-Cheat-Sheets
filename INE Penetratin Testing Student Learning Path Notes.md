@@ -192,6 +192,65 @@ HTTP Message Format:
   - Message Body\r\n
   > \r is `carriage return`, and \n is `newline` 
   
+HTTP Requests:
+- Request method: states type of request
+- Path and protocol version
+- Host: URI of the resource
+- User-Agent string: Details of the client, such as web browser, version, and OS.
+- Accept header: The type of document that is expected in server's response.
+- Accept-Language: A specifc human language, like `en-US`.
+- Accept-Encoding: Accepted encoding of the document, such as `gzip, deflate`.
+- Connection: Whether future communications will reuse current connection, or will require another TCP connection to be established.
+
+HTTP Responses:
+- Status-Line: Protocol version, status code, and textual meaning of status code.
+- Date
+- Headers: May include headers such as `Cache-Control`
+- Content-Type: The type of content included in the response.
+- Content-Encoding: How the content of the response is encoded
+- Server: Header of the server that generated the content (ex: Apache)
+  - An optional field, may be useful with enumeration/ may disclose sensitive information about server.
+- Content-Length: Length of the message body in bytes.
+
+  
+HTTPS:
+- HTTP over SSL/TLS
+- Protects against third parties viewing message contents, NOT against web application flaws (such as SQLi)
+ 
+### III.3: Analyzing HTTP Connections
+Techniques:
+- Using **netcat** to manually craft HTTP requests and viewing the responses
+  ``` console
+  foobar@kali:~$ nc -v thon.org 80
+  DNS fwd/rev mismatch: thon.org != server-143-204-146-83.ewr52.r.cloudfront.net
+  DNS fwd/rev mismatch: thon.org != server-143-204-146-39.ewr52.r.cloudfront.net
+  DNS fwd/rev mismatch: thon.org != server-143-204-146-67.ewr52.r.cloudfront.net
+  DNS fwd/rev mismatch: thon.org != server-143-204-146-64.ewr52.r.cloudfront.net
+  thon.org [143.204.146.83] 80 (http) open
+  GET / HTTP/1.1
+  Host: www.thon.org
+
+  HTTP/1.1 301 Moved Permanently
+  Server: CloudFront
+  Date: Sun, 04 Jul 2021 20:42:40 GMT
+  Content-Type: text/html
+  Content-Length: 183
+  Connection: keep-alive
+  Location: https://www.thon.org/
+  X-Cache: Redirect from cloudfront
+  Via: 1.1 72e01c53ea1f597217a963cf6671454c.cloudfront.net (CloudFront)
+  X-Amz-Cf-Pop: EWR52-C2
+  X-Amz-Cf-Id: 54xexutXOxfEXBEO3kobkXDEPHMM-4m1mjCAr36dSgQd-5-mrkimUQ==
+
+  <html>
+  <head><title>301 Moved Permanently</title></head>
+  <body bgcolor="white">
+  <center><h1>301 Moved Permanently</h1></center>
+  <hr><center>CloudFront</center>
+  </body>
+  </html>
+  ```
+  
 </details>  
   
   
