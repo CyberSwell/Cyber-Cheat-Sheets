@@ -4,7 +4,8 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
 # Table of Contents:
 Background Information:  
 [I. Introduction](#i-introduction)  
-[II. Networking](#i-networking)  
+[II. Networking](#ii-networking)  
+[III. Web Applications](#iii-web-applications)
 
 Penetration Testing Lifecycle:  
 [1. Information Gathering](#1-information-gathering)  
@@ -173,6 +174,27 @@ Penetration Testing Lifecycle:
 - Using "Random SUbdomain FQDNs" transfer mode and "cloudfront_prefixes" cipher on the victim machine, we can put the file back together on the attacker machine by saving the pcap, using ```python packetwhisper.py``` with the second mode, and select the same ciphers.
   </details>
 
+  
+## III. Web Applications
+<details>
+  <summary>Introductory information on web applications</summary>
+
+### III.1: Introduction
+- Web applications run on web servers, and are accessed by clients over web browsers.
+- Calculations or dynamic content can be generated either client or server side.
+  
+### III.2: HTTP Protocol Basics
+- HTTP is a client-server protocol, is used to transfer web pages and web app data on top of TCP.
+- Communication is composed of HTTP requests by the client, and http responses by the server.
+HTTP Message Format:
+  - Headers\r\n
+  - \r\n
+  - Message Body\r\n
+
+  
+</details>  
+  
+  
 ## 1. Information Gathering
 ### 1.1 OSINT
 
