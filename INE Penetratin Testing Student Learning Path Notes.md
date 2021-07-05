@@ -345,6 +345,7 @@ Javascript parameters: https://www.xul.fr/javascript/parameters.php
 <details>
   <summary>Introductory information on Burpsuite</summary>
   
+### IV.1 Burpsuite Intro
 - Burpsuite is a web app analysis tool
 - Open-source counterpart is OWASP's ZAP (Zed Attack Proxy)
 - **Intercepting Proxy**: Allows for analysis and modification of HTTP requests between client and server.
@@ -355,6 +356,30 @@ Repeater:
 - Allows manual crafting of raw HTTP requests
   - Unlike `netcat` or `telnet`, Burpsuite will have syntax highlighting, provide raw and rendered responses, and integrate with other available tools.
 - Recall that after the header, there should be two empty lines, or `\r\n\r\n`. 
+  
+### IV.2 Burpsuite Basics Lab
+- Webapp of 172.16.160.102
+- Turned on Burpsuite/ ZAP, navigated to http://172.16.160.102
+- Page indicated site under construction, HTML comment revealed robots.txt
+- Navigating to robots.txt revealed the following possible directories:
+  ```
+  User-agent: *
+  Disallow: /cgi-bin/
+  Disallow: /includes/
+  Disallow: /images/
+  Disallow: /scripts/
+  Disallow: /*?debug=*
+  Disallow: /connections/
+  Disallow: /backup/
+  Disallow: /settings/
+  ```
+- Intruder/Fuzzer on these directories revealed that the `/connections/` directory was the only directory that returned a 200.
+  - Navigating to `/connections/` had error message `Debug is FALSE`
+  - Possible parameter value with the `Disallow: /*?debug=*` from robots.txt
+  - Tried passing parameter along with `/connections/?debug=`
+  - Error message that `debug` can only be `TRUE` or `FALSE`
+  - Tried `/connections/?debug=TRUE`
+  - Access to phpinfo admin panel with credentials on first line
   
 </details>
   
