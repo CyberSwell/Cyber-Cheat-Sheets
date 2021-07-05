@@ -5,7 +5,7 @@ This is a collection of notes taken while completing INE's "Penetration Testing 
 Background Information:  
 [I. Introduction](#i-introduction)  
 [II. Networking](#ii-networking)  
-[III. Web Applications](#iii-web-applications)
+[III. Web Applications](#iii-web-applications)  
 [IV. Burpsuite](#iv-burpsuite)
 
 Penetration Testing Lifecycle:  
