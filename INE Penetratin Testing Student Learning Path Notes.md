@@ -348,7 +348,7 @@ Techniques:
 - Open-source counterpart is OWASP's ZAP (Zed Attack Proxy)
 - **Intercepting Proxy**: Allows for analysis and modification of HTTP requests between client and server.
 - Also allows for crawling, manually building requests, and fuzzing.
-> Setup information from INE was omitted because I already know how to set up Burpsuite/ZAP.
+> Setup information from INE was omitted because I already know how to set up Burpsuite/ZAP.  
 Repeater:
 - Allows manual crafting of raw HTTP requests
   - Unlike `netcat` or `telnet`, Burpsuite will have syntax highlighting, provide raw and rendered responses, and integrate with other available tools.
