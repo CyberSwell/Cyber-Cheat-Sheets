@@ -336,6 +336,7 @@ Techniques:
 - Prevents JS code from getting or setting properties if the request originates from a different origin.
 - Browser uses `Protocol`, `Hostname`, and `Port` to determien if JS can access a resource.\
 > Example: A user access Webapp A, which contains a malicious JS that attempts to read data from Webmail B, which the user is already logged into. SOP prevents Webapp A's JS from being executed and reading data from Webmail B.
+Javascript parameters: https://www.xul.fr/javascript/parameters.php
   
   
 </details>  
@@ -354,7 +355,7 @@ Repeater:
 - Allows manual crafting of raw HTTP requests
   - Unlike `netcat` or `telnet`, Burpsuite will have syntax highlighting, provide raw and rendered responses, and integrate with other available tools.
 - Recall that after the header, there should be two empty lines, or `\r\n\r\n`. 
-
+  
 </details>
   
   
