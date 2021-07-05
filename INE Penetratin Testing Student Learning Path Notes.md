@@ -381,6 +381,16 @@ Repeater:
   - Tried `/connections/?debug=TRUE`
   - Access to phpinfo admin panel with credentials on first line
   
+### IV.3 Burpsuite Lab
+- Webapp of 10.100.13.5
+- Web page appeared to have lots of links, used `spider` too on ZAP to enumerate through.
+- Spidering revealed robots.txt, which included a `Disallow: /Y7gMEMZtin/` entry.
+- Navigating to http://10.100.13.5/Y7gMEMZtin/login.php revealed a login portal.
+  - PHPSESSID cookie is being set
+  - Examining the response for `/login.php`, scrolling all the way at the bottom, you can pass `DEBUG=policeDebug` to bypass auth
+  - Sent HTTP GET for `http://10.100.13.5/Y7gMEMZtin/login.php?DEBUG=policeDebug`
+  - Auth bypassed, redirected to `/Y7gMEMZtin/index.php`
+  
 </details>
   
   
