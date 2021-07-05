@@ -18,8 +18,37 @@ Penetration Testing Lifecycle:
 ## I. Introduction
 <details>
   <summary>Introductory information on pentesting</summary>
-  
->(nothing notable for me in this section)  
+
+Pentesting:
+- Discovering any and all vulnerabilities on client's infrastructure - not **just** about getting root!
+- Very imprtant that client infrastructure is not destroyed.
+
+Stages of a Pentest:
+- Engagement: Establsihing details of the pentest
+  - Quotation: Fee established, factoring in type of engagement, amount of time, complexity, and size of scope.
+    - Can alternatively be done by an hourly fee.
+  - Proposal SUbmittal: Provide a sound and targeted proposal, keeping in mind client's needs and infrastructure.
+    - Include understanding of client needs, approach, methodology, tools, types of testing, value that you will bring, risks & benefits, and estimate of time required.
+    - Address type of engagement, pentest vs vuln assessment, remote vs onsite, and scope.
+      - Always ensure target is in scope. With shared hosting, hosting provider must give written permisison.
+  - Handling Incidents: Always communicate with customer, establish incident-handling procedure by team and client or emergency contact.
+  - Rules of Engagement: Document that defines scope, what pentest is allowed to do, and time window.
+- Information Gathering: Establish as wide of an attack surface as possible.
+  - Gather general information, such as company structure, names, email addresses, office locations, etc using OSINT or social engineering (if allowed in rules of engagement).
+  - Also includes mapping out IP addresses with server OS's, looking at DNS information, and crawling webpages.
+ - Footprinting and Scanning: In-depth look at in-scope servers and services.
+  - Make educated guesses on OS and services.
+  - Identify which ports are open, determine what thte purpose of a host is (ex: client or server), and its importance to the client.
+- Vulnerability Assessment:
+  - Build list of vulns that could be present on systems.
+  - Automated tools/scanners
+- Exploitation
+  - Verify if vulnerability actually exists
+  - Hopefully exploitation allows for us to investigate network further
+- Reporting: Delivering results of test to executives, IT staff, dev team, and its significance.
+   - Discuss techniques, vulns found, exploits used, impacts for each vuln, and remediation tips. 
+   - Remediation tips are the biggest value provided to the client.
+
 </details>
   
 ## II. Networking
