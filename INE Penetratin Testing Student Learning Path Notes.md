@@ -383,7 +383,7 @@ Repeater:
   
 ### IV.3 Burpsuite Lab
 - Webapp of 10.100.13.5
-- Web page appeared to have lots of links, used `spider` too on ZAP to enumerate through.
+- Web page appeared to have lots of links, used `spider` tool on ZAP to enumerate through.
 - Spidering revealed robots.txt, which included a `Disallow: /Y7gMEMZtin/` entry.
 - Navigating to http://10.100.13.5/Y7gMEMZtin/login.php revealed a login portal.
   - PHPSESSID cookie is being set
