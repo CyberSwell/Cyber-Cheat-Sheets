@@ -17,7 +17,7 @@ Penetration Testing Lifecycle:
 
 ## I. Introduction
 <details>
-  <summary>Introductory information on pentesting</summary>
+  <summary>Introductory information on pentesting (**click to expand**)</summary>
 
 Pentesting:
 - Discovering any and all vulnerabilities on client's infrastructure - not **just** about getting root!
@@ -53,7 +53,7 @@ Stages of a Pentest:
   
 ## II. Networking
 <details>
-  <summary>Introductory information on IP, Routing, Switching, Firewalls, and IDS/IPS's</summary>
+  <summary>Introductory information on IP, Routing, Switching, Firewalls, and IDS/IPS's (**click to expand**)</summary>
   
 ### II.1 IP
 **IPV4** 
@@ -207,7 +207,7 @@ Stages of a Pentest:
   
 ## III. Web Applications
 <details>
-  <summary>Introductory information on web applications</summary>
+  <summary>Introductory information on web applications (**click to expand**)</summary>
 
 ### III.1: Introduction
 - Web applications run on web servers, and are accessed by clients over web browsers.
@@ -372,7 +372,7 @@ Javascript parameters: https://www.xul.fr/javascript/parameters.php
 
 ## IV. Burpsuite
 <details>
-  <summary>Introductory information on Burpsuite</summary>
+  <summary>Introductory information on Burpsuite/ OWASP ZAP (**click to expand**)</summary>
   
 ### IV.1 Burpsuite Intro
 - Burpsuite is a web app analysis tool
