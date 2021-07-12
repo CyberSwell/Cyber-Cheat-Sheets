@@ -588,6 +588,7 @@ HTTP 1.0 Syntax:
 Syntax:
 ``` console
 kali@foobar:~$ nc [flags] {host} {port}
+```
 Flags:
 - `-l`: Listen (instead of reach out for a connection)
 - `-v`: Verbosity
