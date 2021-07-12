@@ -584,7 +584,7 @@ REST API's:
 HTTP 1.0 Syntax:
 - Does not require `Host:` header.
     
-4.1.2: Netcat
+### 4.1.2: Netcat
 Syntax:
 ``` console
 kali@foobar:~$ nc [flags] {host} {port}
@@ -607,4 +607,17 @@ Sending file data over nc:
 foobar@kali:~$ cat file.txt | nc -v 127.0.0.1 4242
 ```
 > Files can be "transferred" by setting up listener, piping output to file, and then sending file to listener with nc.
+  
+### 4.1.2 Directory & File Enumeration
+- If a new subdirectory is created, spiders/ users will not typically be able to find it unless a link is published.
+  - Manually navigating to the resource (ex: http://www.site.com/secret) could still provide access
+- Files/Resources of Interest:
+  - Backups: May contain IP addresses, credentials, or other sensitive information.
+    - `.bak`, `.old`, `.txt`, or `.xxx` are commonly used backup file extensions.
+  - Configuration Files: May contain IP addresses, names of services, credentials, or other sensitive information.
+
+Techniques:
+- OWASP's Dirbuster
+> They ran through how to use the GUI. GUI is lame. Use CLI instead like a true skript kiddie. Gobuster is threaded, whereas Dirb can search recursively. Pros and cons to each. 
+
 ## 5. Reporting
