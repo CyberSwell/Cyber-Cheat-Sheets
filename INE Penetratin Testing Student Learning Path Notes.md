@@ -584,4 +584,23 @@ REST API's:
 HTTP 1.0 Syntax:
 - Does not require `Host:` header.
     
+4.1.2: Netcat
+Syntax:
+``` console
+kali@foobar:~$ nc [flags] {host} {port}
+Flags:
+- `-l`: Listen (instead of reach out for a connection)
+- `-v`: Verbosity
+- `-p`: Specify port when listening (ex: `nc -p 80`)
+  
+Piping netcat output to a file:  
+``` console
+foobar@kali:~$ nc 127.0.0.1 80 | log.txt
+```
+
+Sending file data over nc:
+``` console
+foobar@kali:~$ cat file.txt | nc -v 127.0.0.1 4242
+```
+> Files can be "transferred" by setting up listener, piping output to file, and then sending file to listener with nc.
 ## 5. Reporting
