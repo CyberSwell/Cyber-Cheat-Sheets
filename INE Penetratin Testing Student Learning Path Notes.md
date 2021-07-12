@@ -523,5 +523,65 @@ Techniques:
   - Nessus: Composed of a client, which configures scans, and server, which carries out the scans.
     - Also sends out probes to verify if vulnerability exists
 ## 4. Exploitation
+### 4.1 Web App Attacks
+HTTP Methods:
+- Misconfigured HTTP verbs becoming rarer in web servers, but very common in embedded devices/ IOT devices.
+- GET: Used to request a resource
+  - Can also be used to pass arguments to web app
+  ```
+  GET /page.php?argument=value HTTP/1.1
+  Host: www.site.com
+- POST: Used to submit HTML form data. Parameters are in message body.
+  ```
+  POST /login.php HTTP/1.1
+  Host: www.site.com
   
+  Username=admin&password=admin
+  ```
+  
+- PUT: Used to upload a file to the server. Can lead to RCE/ reverse shells if incorrectly configured.
+  - Requires specifying size of data in `Content-length:` header. Use `wc -m` to determine length of file in bytes.
+  ``` console
+  foobar@kali:~$
+  PUT /phpenum.php HTTP/1.0
+  Host: www.site.com
+  Content-type: text/html
+  Content-length: 20
+
+  <?php phpinfo(); ?>  
+  ```
+    
+- HEAD: Similar to GET, but just asks for headers in response instead of body.
+- DELETE: Used to remove a file from a server. Can lead to denial of service or data loss if incorrectly configured.
+  ``` console
+  foobar@kali:~$ nc site.com 80
+  DELETE /index.txt HTTP/1.0
+  
+  HTTP/1.1 200 OK {INDICATES FILE WAS SUCCESSFULLY DELETED}
+  ...
+  ```
+  
+- OPTIONS: Used to query for available HTTP methods/verbs.
+    - Use to enumerate web server.
+    ``` console
+    foobar@kali:~$ nc site.com 80
+    OPTIONS/ HTTP/1.0
+    
+    HTTP/1.1 200 OK
+    Date:...
+    Server:...
+    Allow: {METHODS HERE}
+    ...
+    ```
+
+REST API's:
+- `Representational State Transfer Application Programming Interface`
+- Specific type of web app, relies heavily on HTTP verbs.
+    - Ex: Using `PUT` to save data (instead of just saving a file).
+- Make sure to verify that a **PUT/DELETE** method is an actual HTTP method, not REST API's **PUT/DELETE** method.
+    - Look for existence of the file that was created/deleted with `PUT/DELETE`.
+
+HTTP 1.0 Syntax:
+- Does not require `Host:` header.
+    
 ## 5. Reporting
