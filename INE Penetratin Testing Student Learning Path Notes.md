@@ -618,6 +618,15 @@ foobar@kali:~$ cat file.txt | nc -v 127.0.0.1 4242
 
 Techniques:
 - OWASP's Dirbuster
-> They ran through how to use the GUI. GUI is lame. Use CLI instead like a true skript kiddie. Gobuster is threaded, whereas Dirb can search recursively. Pros and cons to each. 
+> They ran through how to use the GUI. GUI is lame. Use CLI instead like a true skript kiddie. Gobuster is threaded, whereas Dirb can search recursively. Pros and cons to each. Ffuf is mad fast as well.
+
+### 4.1.3: Google Dorking
+Operators:
+- `site:` - Include only results from a given hostname.
+- `intitle:` - Filter only results with this page title.
+- `inurl:` - Filter only results with string in URL.
+- `filetype:` - Filter only certain filetypes.
+- `AND`, `OR`, `&`, `|` - Logical operators that can be thrown into search query as well.
+- `-` - Can be used to filter **out** keywords from the results.
 
 ## 5. Reporting
