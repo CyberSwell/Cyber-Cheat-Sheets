@@ -696,6 +696,7 @@ Manual Techniques:
 	- Query string: `' OR 1=1;#`
 - Use a union to select tables of interest:
 	- Query string: `' UNION SELECT Username, Password FROM Accounts WHERE 1=1#;`
+	- May need to add multiple fields to get the tables after UNION to to match up with original table queried before UNION.
 - Use `substring()` function to select specific substrings of a string and enumerate it.
 	- Ex, `SELECT substring(user(),1,1) = 'a'` checks if the first letter is `a`.
 - Test other methods, such as DELETE or INSERT.
