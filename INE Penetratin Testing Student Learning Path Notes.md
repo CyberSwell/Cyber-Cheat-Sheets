@@ -708,6 +708,9 @@ SQLMap
 ``` console
 foobar@kali:~$ sqlmap -u http://site.com -p parameter [options]
 ```
-> ex: `sqlmap -u 'http://site.com/login.php?username=admin' -p username --technique=U` for a UNION based SQLi attack.
-
+> examples: 
+	`sqlmap -u 'http://site.com/login.php?username=admin' -p username --technique=U` for a UNION based SQLi attack.
+> 	`sqlmap -u 'http://site.com' --date=<POST string> -p parameter [options` for SQLi with POST requests.
+	
+	
 ## 5. Reporting
