@@ -687,6 +687,8 @@ Basic SQL Syntax:
 - Comments: `#` or `--`
 
 SQLi can occur when user inputs are used DIRECTLY into a query, without being sanitized.
+- GET parameters, POST parameters, HTTP headers (User-Agent, Cookie, Accept, etc).
+Techniques:
 - Use a tautology:
 	- Query string: `' OR 1=1;#`
 - Use a union to select tables of interest:
