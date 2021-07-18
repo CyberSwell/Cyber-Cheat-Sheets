@@ -658,7 +658,7 @@ Stealing Cookies:
 - Can happen if `HttpOnly` flag is not enabled.
 - Uses JavaScript
 - Test: 
-	- Try using basic HTML tags, such as `<b>` or `<i>`.
+	- Try using basic HTML tags, such as `<b>test</b>` or `<i>test</i>`.
 	- See if Javascript is usable with `<script>alert("XSS")</script>`
 	- See if cookie is viewable with `<script>alert(document.cookie)</script>`
 ``` javascript
