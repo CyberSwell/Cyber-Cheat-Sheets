@@ -657,7 +657,7 @@ Types of XSS:
 Stealing Cookies:
 - Can happen if `HttpOnly` flag is not enabled.
 - Uses JavaScript
-- Test: `<script>alert(document.cookie)</script>
+- Test: `<script>alert(document.cookie)</script>`
 ``` javascript
 <script>
 var i = new Image();
