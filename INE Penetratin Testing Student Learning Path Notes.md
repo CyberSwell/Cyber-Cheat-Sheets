@@ -688,5 +688,7 @@ Basic SQL Syntax:
 
 SQLi can occur when user inputs are used DIRECTLY into a query, without being sanitized.
 - Use a tautology:
-	- Query string: `' OR 1=1#`
+	- Query string: `' OR 1=1;#`
+- Use a union to select tables of interest:
+	- Query string: `' UNION SELECT Username, Password FROM Accounts WHERE 1=1#;`
 ## 5. Reporting
