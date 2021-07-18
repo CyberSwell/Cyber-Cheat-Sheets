@@ -689,10 +689,25 @@ Basic SQL Syntax:
 SQLi can occur when user inputs are used DIRECTLY into a query, without being sanitized.
 - GET parameters, POST parameters, HTTP headers (User-Agent, Cookie, Accept, etc).
 - Test string terminators (`'` and `"`), SQL commands (`SELECT`, `UNION`), and comments (`#`, `--`).
+	- May need to do `-- -` because browser may remove trailing spaces in URL/ GET request.
 	
-Techniques:
+Manual Techniques:
 - Use a tautology:
 	- Query string: `' OR 1=1;#`
 - Use a union to select tables of interest:
 	- Query string: `' UNION SELECT Username, Password FROM Accounts WHERE 1=1#;`
+- Use `substring()` function to select specific substrings of a string and enumerate it.
+	- Ex, `SELECT substring(user(),1,1) = 'a'` checks if the first letter is `a`.
+- Test other methods, such as DELETE or INSERT.
+
+Tools:
+SQLMap
+- Open source tool, capable of detecting and exploiting some SQLi
+	- Highly recommend first manually testing for SQLi and then persuing known vulns with SQLMap
+- Syntax:
+``` console
+foobar@kali:~$ sqlmap -u http://site.com -p parameter [options]
+```
+> ex: sqlmap -u 'http://site.com/login.php?username=admin' -p username --technique=U for a UNION based SQLi attack.
+
 ## 5. Reporting
