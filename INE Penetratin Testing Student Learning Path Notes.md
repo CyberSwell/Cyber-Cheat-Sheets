@@ -677,4 +677,13 @@ fclose($fp);
 ```
 > Listener on attacker site that will log the cookie sent to it via the POST request.
 
+### 4.2: Network Attacks
+### 4.2.1: SQLi
+Basic SQL Syntax:
+- `SELECT [something] FROM [table] WHERE [condition];`
+- Comments: `#` or `--`
+
+SQLi can occur when user inputs are used DIRECTLY into a query, without being sanitized.
+- Use a tautology:
+	- Query string: `\` OR 1=1`
 ## 5. Reporting
