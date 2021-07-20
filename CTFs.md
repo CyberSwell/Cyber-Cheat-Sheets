@@ -4,16 +4,20 @@
 https://github.com/Tib3rius/AutoRecon
 
 ``` console
+# Set up requirements
 sudo apt install python3
 sudo apt install python3-pip
 sudo apt install python3-venv
 python3 -m pip install --user pipx
 python3 -m pipx ensurepath
+# Allow sudo'ing
 alias sudo="sudo env \"PATH=$PATH\""
 sudo visudo /etc/sudoers
 # Set the following:
 Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/[username]/.local/bin"
+# Install necessary wordlists/ commands
 sudo apt install seclists curl enum4linux feroxbuster nbtscan nikto nmap onesixtyone oscanner smbclient smbmap smtp-user-enum snmp sslscan sipvicious tnscmd10g whatweb wkhtmltopdf
+# Install autorecon
 pipx install git+https://github.com/Tib3rius/AutoRecon.git
 
 usage: autorecon    [-h] [-t TARGET_FILE] [-ct <number>] [-cs <number>]
