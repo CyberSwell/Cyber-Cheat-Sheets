@@ -756,7 +756,16 @@ Universal Naming COnvention (UNC) paths:
 		- `-U`: Enumerate users
 		- `-P`: Enumerate password policy
 	- Windows: `wininfo [ip] [parameters]
-	- Linux: `enum4linux`
-	
+	- Linux: `enum4linux [options] [ip]`
+		- `-P`: Enumerate password policy
+		- `-S`: Enumerate available shares
+		- `-s [wordlist]`: Brute force shares from wordlist (ex: /usr/share/enum4linux/share-list.txt)
+		- `-a`: Run all the available options
+	- Linux: `/usr/share/doc/python3-impacket/examples`
+		- https://www.hackingarticles.in/impacket-guide-smb-msrpc/
+		- `python3 samrdump.py [ip]`: Get info about host using the SAM account
+	- Nmap:
+		- `
+		
 	
 ## 5. Reporting
