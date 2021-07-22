@@ -756,6 +756,7 @@ Universal Naming COnvention (UNC) paths:
 		- `-U`: Enumerate users
 		- `-P`: Enumerate password policy
 	- Windows: `wininfo [ip] [parameters]
+	- Linux: `enum4linux`
 	
 	
 ## 5. Reporting
