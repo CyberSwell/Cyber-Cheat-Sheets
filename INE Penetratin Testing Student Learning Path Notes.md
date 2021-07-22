@@ -764,8 +764,57 @@ Universal Naming COnvention (UNC) paths:
 	- Linux: `/usr/share/doc/python3-impacket/examples`
 		- https://www.hackingarticles.in/impacket-guide-smb-msrpc/
 		- `python3 samrdump.py [ip]`: Get info about host using the SAM account
-	- Nmap:
-		- `
-		
+	- Nmap Scripts:
+		- `nmap -script=smb-enum-shares [ip]`: Use the NSE script for enumerating SMB shares.
+		- `nmap -script=smb-enum-users [ip]`: Use the NSE script for enumerating users.
+		- `nmap -script=smb-brute [ip]`: Use the NSE script for bruteforcing creds.
+
+### 4.3.2 MS SQL Server
+- Scanning: `msf /auxiliary/scanner/mssql/*`
+	- `/mssql_login` - attempt to login
+	- `/mssql_enum` - enumerate db
+	- `exploit/windows/mssql/mssql_payload` - RCE after getting admin DBMS creds.
 	
+### 4.4 Meterpreter 
+Useful Commands:
+- `sysinfo`: retrieve info about name, OS, architecture, system language, and meterpreter version being used.
+- `ifconfig`
+- `route`
+- `getuid`: Show which user is running the process exploited by Metasploit.
+- `getsystem`: Run the privesc script.
+	- User Account Control policy in modern windows may prevent this.
+	- Use the `exploit/windows/local/bypassuac` module to bypass this. LOL.
+- `upload [local path] [remote path]`
+- `download [remote path] [local path]
+- `shell`: Launch a standard OS shell.
+	
+Post Exploitation Modules:
+- Windows:
+	- `post/windows/gather/hashdump` - dump password db of the Windows machine.
+
+### 4.5 Password Cracking
+John the Ripper:
+- `unshadow /etc/passwd /etc/shadow > hashes.txt`: Unshadow the password hashes into hashes.txt
+- `john [options] [password files]
+	- Modes:
+		- `--wordlist=[wordlist]`: Dictionary attack with wordlist
+
+Hashcat:
+- `hashcat [options] [hash/hash file] [wordlist]
+	- `-m`: hash type
+	- `-a`: attack type
+	- `-o`: output file
+	- `-b`: benchmark
+	- `-O`: optimize performance
+	
+### 4.6 Auth Cracking
+Hydra:
+- `hydra [options] [target]`
+	- `hydra -U [module]`: get detailed info about a module
+	- `-L` and `-P`: username file and password file
+	- `service://server`: specifying target
+		- `hydra -L users.txt -P pass.txt telnet://ip`: attack telnet running on host.
+		- `hydra -L users.txt -P pass.txt http-get://ip/` attack against basic HTTP auth protected web resource
+
 ## 5. Reporting
+	
