@@ -718,6 +718,44 @@ foobar@kali:~$ sqlmap -u http://site.com -p parameter [options]
 > `sqlmap -u 'http://site.com/login.php?username=admin' -p username --technique U --users -D [database] -T [table] -C username,password --dump` to get a table view of contents of the username and password columns.  
 > https://github.com/sqlmapproject/sqlmap
 
+### 4.3 Windows Shares
+NetBIOS: Network Basic Input Output Systems, helps to provide hostname, NetBIOS name, Domain, and Network Shares.
+- Uses UDP to perform name resolution and other multicast comms.
+- Uses TCP for big transfers like file transfers.
+- **Datagrams:** used to list shares and machines
+- **Names:** used to find workgroups
+- **Sessions:** used to transmit data to and from a Windows share.
+
+Universal Naming COnvention (UNC) paths:
+- `\\ServerName\ShareName\file`
+- Special default administrative shares:
+	- `\\Computername\C$` - Allows access to the "C" volume on a local machine.
+	- `\\Computername\admin$` - Points to the local windows installation directory.
+	- `\\Computername\ipc$` - Used for Windows inter-process communcation (cannot be browsed to via File Explorer).
+	
+### 4.3.1 Null Sessions:
+- Connecting to Windows Administrative Shares without authentication, can lead to RCE.
+	- Modern day Windows installations prevent this, but legacy systems may be vulnerable still.
+- Enumerating Shares: List out a machine's (specified with IP) name table.
+	- Windows: `nbtstat -A [IP]` 
+	- Linux: `nmblookup -A [IP]`
+	- Record Types:
+		- `<00>`: Device is a workstation
+		- `<20>`: Device is running a file sharing service.
+
+- Viewing Shares:
+	- Windows: `NET VIEW [ip]`
+	- Linux: smbclient -L //[ip] -N
+	
+- Connecting to Shares with null session (no user or pass):
+	- Windows: `NET USE \\[ip]\[share] '[PASSWORD]' /u:'[Username]'
+	- Linux: `smbclient //[ip]/[share] -N
+	
+- Automated tools:
+	- Windows: `enum [parameters] [ip]
+		- `-U`: Enumerate users
+		- `-P`: Enumerate password policy
+	- Windows: `wininfo [ip] [parameters]
 	
 	
 ## 5. Reporting
