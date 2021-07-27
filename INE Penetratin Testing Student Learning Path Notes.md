@@ -761,6 +761,7 @@ Universal Naming COnvention (UNC) paths:
 		- `-S`: Enumerate available shares
 		- `-s [wordlist]`: Brute force shares from wordlist (ex: /usr/share/enum4linux/share-list.txt)
 		- `-a`: Run all the available options
+	> Note: You may need to add the following to `/etc/samba/smb.conf` global settings with newer versions of enum4linux to test for anonymous shares: `client min protocol = NT1`
 	- Linux: `/usr/share/doc/python3-impacket/examples`
 		- https://www.hackingarticles.in/impacket-guide-smb-msrpc/
 		- `python3 samrdump.py [ip]`: Get info about host using the SAM account
