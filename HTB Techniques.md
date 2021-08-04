@@ -48,6 +48,11 @@ git checkout 123456789
 ```
 
 ## Reverse Shells:
++ <b>Listen for ping (ICMP echo)</b>
+``` console
+$ tcpdump -i <interface> icmp
+```
+
 
 + <b>Netcat - Listener</b>
 ```console
