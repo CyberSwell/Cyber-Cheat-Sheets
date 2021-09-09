@@ -27,7 +27,7 @@ Stages of a Pentest:
 - Engagement: Establsihing details of the pentest
   - Quotation: Fee established, factoring in type of engagement, amount of time, complexity, and size of scope.
     - Can alternatively be done by an hourly fee.
-  - Proposal SUbmittal: Provide a sound and targeted proposal, keeping in mind client's needs and infrastructure.
+  - Proposal Submittal: Provide a sound and targeted proposal, keeping in mind client's needs and infrastructure.
     - Include understanding of client needs, approach, methodology, tools, types of testing, value that you will bring, risks & benefits, and estimate of time required.
     - Address type of engagement, pentest vs vuln assessment, remote vs onsite, and scope.
       - Always ensure target is in scope. With shared hosting, hosting provider must give written permisison.
@@ -565,7 +565,7 @@ HTTP Methods:
     - Use to enumerate web server.
     ``` console
     foobar@kali:~$ nc site.com 80
-    OPTIONS/ HTTP/1.0
+    OPTIONS / HTTP/1.0
     
     HTTP/1.1 200 OK
     Date:...
