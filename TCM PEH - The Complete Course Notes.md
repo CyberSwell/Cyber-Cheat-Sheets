@@ -69,6 +69,7 @@ Syntax: ```gobuster dir -u [url] -w [wordlist]```
 **SMB Relay:** If SMB signing is disabled and credentials captured by Responder belong to admin, hashes can be relayed directly to other machines in attempt to gain access and authenticate.
 ## Tools - Active Directory:
 **responder:** Used for LLMNR and NBT-NS attacks
+
 Syntax: ```python /usr/share/responder/Responder.py -I {interface} {options}```
 - `-r`: Enable answers for netbios wredir suffix queries.
 - `-d`: Enable answers for netbios domain suffix queries.
