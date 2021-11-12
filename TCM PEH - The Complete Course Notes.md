@@ -65,6 +65,7 @@ Syntax: ```gobuster dir -u [url] -w [wordlist]```
 
 # 3: Attacks
 **LLMNR Poisoning:** When a Windows host cannot resolve a hostname with DNS, it resorts to LLMNR which sends out a multicast DNS query to all hosts on the LAN. If this fails, the host will then use NetBios Name Service (NBT-NS) to attempt to resolve hostname. In these resolution protocols, any host on the network can respond. When responded to, the requesting host will send the current user's Username and NTLMv2 hash to authenticate to the intended hostname, which can then be captured by Responder. 
+
 **SMB Relay:** If SMB signing is disabled and credentials captured by Responder belong to admin, hashes can be relayed directly to other machines in attempt to gain access and authenticate.
 ## Tools - Active Directory:
 **responder:** Used for LLMNR and NBT-NS attacks
