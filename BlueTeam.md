@@ -1,15 +1,23 @@
 # BlueTeam
 List of non-pen tasting stuff. Pen untasters?
 
+# netstat
+```bash
+netstat -ano
+```
+- **a:** Show all listening and non-listening sockets
+- **n:** Show numerical IP's instead of hostnames
+- **o:** Include information about network timers
+
 ## ps
 ```bash
-# View all processes (a) 
-# unlimited width (ww) 
-# with process trees (f) 
-# and user-oriented format (u) 
-# without "must-have-tty" restriction (x)
 ps awwfux
 ```
+- **a:** View all processes
+- **ww:** Unlimited width
+- **f:** Show process trees
+- **u:** Display in user-oriented format
+- **x:** Remove "must-have-tty" restriction
 
 ## iptables
 ```bash
