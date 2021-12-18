@@ -51,6 +51,7 @@ git checkout 123456789
 + https://hackertarget.com/attacking-wordpress/
 + WPscan
 + `nmap -sV --script http-wordpress-enum`
++ Ajax spider to check /wp-content/{plugin} Javascript links
 
 XML XXE:
 ```
