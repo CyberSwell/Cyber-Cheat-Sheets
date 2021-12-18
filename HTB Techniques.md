@@ -47,7 +47,8 @@ Check out previous commit:
 ```bash
 git checkout 123456789
 ```
-**Wordpress Enum:**
+**Wordpress:**
++ https://hackertarget.com/attacking-wordpress/
 + WPscan
 + `nmap -sV --script http-wordpress-enum`
 
