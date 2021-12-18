@@ -47,7 +47,9 @@ Check out previous commit:
 ```bash
 git checkout 123456789
 ```
-
+**Wordpress Enum:**
++ WPscan
++ `nmap -sV --script http-wordpress-enum`
 
 XML XXE:
 ```
