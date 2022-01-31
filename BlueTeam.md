@@ -1,5 +1,5 @@
 # BlueTeam
-List of non-pen tasting stuff. Pen untasters?
+List of non pen tasting stuff. Pen untasters?
 
 # netstat
 ```bash
@@ -9,6 +9,10 @@ netstat -ano
 - **n:** Show numerical IP's instead of hostnames
 - **o:** Include information about network timers
 
+```bash
+netstat -vatu
+```
+> Was recommended for CCDC competition. Displays udp, tcp, ports awaiting connection, and process.
 ## ps
 ```bash
 ps awwfux
