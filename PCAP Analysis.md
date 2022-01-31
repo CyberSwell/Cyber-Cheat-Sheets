@@ -13,4 +13,4 @@ Methodologies picked up from coursework, CTF's, and forensic challenges.
 
 ## Network Miner:
 - `Credentials` tab contains parsed login credentials for users
-- `Files` tab contains reassembled files from pcap
+- `Files` tab contains reassembled files from pcap (web pages, images, certificates)
