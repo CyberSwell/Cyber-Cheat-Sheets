@@ -5,7 +5,7 @@ List of non pen tasting stuff. Pen untasters?
 ```bash
 netstat -peanut
 ```
-> Use this to hunt for sussy open ports/ processes that shouldn't have an established connection. Such as Python.
+> Use this to hunt for sussy open ports/ processes that shouldn't have an established connection, such as a random Python script.
 - **p:** Display both the PID and the program name
 - **e:** Display extended information
 - **a:** Display all sockets including ones which are not connected
