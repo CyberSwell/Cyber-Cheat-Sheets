@@ -3,16 +3,20 @@ List of non pen tasting stuff. Pen untasters?
 
 # netstat
 ```bash
-netstat -ano
+netstat -peanut
 ```
-- **a:** Show all listening and non-listening sockets
-- **n:** Show numerical IP's instead of hostnames
-- **o:** Include information about network timers
+> Use this to hunt for sussy open ports/ processes that shouldn't have an established connection. Such as Python.
+- **p:** Display both the PID and the program name
+- **e:** Display extended information
+- **a:** Display all sockets including ones which are not connected
+- **n:** Do not try to resolve the names
+- **u:** Display UDP sockets
+- **t:** Display TCP sockets
 
 ```bash
-netstat -vatu
+netstat -vatup 
 ```
-> Was recommended for CCDC competition. Displays udp, tcp, ports awaiting connection, and process.
+> Was recommended for CCDC competition. Displays udp, tcp, ports awaiting connection, and process. 
 ## ps
 ```bash
 ps awwfux
