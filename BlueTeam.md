@@ -1,11 +1,12 @@
 # BlueTeam
 List of non pen tasting stuff. Pen untasters?
 
-# netstat
+## Monitoring Network Connections
+Look for connections to IP's outside of known good subnets, processes that shouldn't have a connection (ex: a random Python script), or anything else that looks sussy.
+
 ```bash
 netstat -peanut
 ```
-> Use this to hunt for sussy open ports/ processes that shouldn't have an established connection, such as a random Python script listening on 1337.
 - **p:** Display both the PID and the program name
 - **e:** Display extended information
 - **a:** Display all sockets including ones which are not connected
@@ -16,7 +17,7 @@ netstat -peanut
 ```bash
 netstat -vatup 
 ```
-> Was recommended for CCDC competition. Displays udp, tcp, ports awaiting connection, and process. 
+> Was recommended for CCDC competition by Alec. Displays udp, tcp, ports awaiting connection, and process. 
 ```
 ss -pants
 ```
@@ -27,10 +28,11 @@ ss -pants
 - **t:** Display TCP sockets
 - **s:** Show summary information
 
-## ps
+## Monitoring Processes
 ```bash
-ps awwfux
+ps -awwfux
 ```
+> Stewart called this "ps oh dear". Lol, get it?
 - **a:** View all processes
 - **ww:** Unlimited width
 - **f:** Show process trees
@@ -38,7 +40,13 @@ ps awwfux
 - **x:** Remove "must-have-tty" restriction
 > Pipe to grep and search for PID's of unknown connections, rogue bash/sh processes, etc.
 
-## iptables
+## Firewall Rules
+### iptables
+Tables (-t)
+- filtering (default): Used for packet filtering
+- nat: Used for address translation
+
+Chains
 ```bash
 # For incoming packets (-A INPUT) from host (-s 192.168.0.1) drop them (-j DROP)
 sudo iptables -A INPUT -s 192.168.0.1 -j DROP
