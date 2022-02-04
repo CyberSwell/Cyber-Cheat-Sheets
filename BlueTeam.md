@@ -40,13 +40,27 @@ ps -awwfux
 - **x:** Remove "must-have-tty" restriction
 > Pipe to grep and search for PID's of unknown connections, rogue bash/sh processes, etc.
 
-## Firewall Rules
+## Firewalls
+### Netfilter Hooks & iptables chains
+- NF_IP_PRE_ROUTING: Triggers PREROUTING chain, occurs as soon as packet arrives at NIC, before processed by any other hook.
+- NF_IP_LOCAL_IN: Triggers INPUT chain, after incoming packet arrives in system (if destined for it).
+- NF_IP_FORWARD: FORWARD chain triggered if packet is supposed to be forwarded to another host.
+- NF_IP_OUT: OUTPUT triggered by traffic going out as soon as it hits network stack.
+- NF_IP_POST_ROUTING: POSTROUTING chain triggered as traffic going out, right before being put on wire.
+
 ### iptables
-Tables (-t)
+Tables (-t):
 - filtering (default): Used for packet filtering
 - nat: Used for address translation
 
-Chains
+Rules:
+- `sudo iptables {table} -{A|I|D} {chain} {OPTIONS} -j {ACTION}
+  - A: Add to end of chain
+  - I: Insert in beginning of chain
+  - D: Delete matching rule (Alternatively can `iptables -D {chain} {ruleNumber}
+
+
+Examples:
 ```bash
 # For incoming packets (-A INPUT) from host (-s 192.168.0.1) drop them (-j DROP)
 sudo iptables -A INPUT -s 192.168.0.1 -j DROP
