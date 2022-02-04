@@ -54,7 +54,9 @@ Tables (-t):
 - nat: Used for address translation
 
 Rules:
-- `sudo iptables {table} -{A|I|D} {chain} {OPTIONS} -j {ACTION}`
+```bash
+sudo iptables {table} -{A|I|D} {chain} {OPTIONS} -j {ACTION}
+```
   - A: Add to end of chain
   - I: Insert in beginning of chain
   - D: Delete matching rule (Alternatively can `iptables -D {chain} {ruleNumber}
