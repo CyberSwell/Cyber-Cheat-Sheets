@@ -18,9 +18,14 @@ netstat -vatup
 ```
 > Was recommended for CCDC competition. Displays udp, tcp, ports awaiting connection, and process. 
 ```
-ss -pant
+ss -pants
 ```
 > Silly, provides similar functionality as netstat -vatup
+- **p:** Display process
+- **a:** Display all connection states (not just established)
+- **n:** Show port number, don't resolve service name
+- **t:** Display TCP sockets
+- **s:** Show summary information
 
 ## ps
 ```bash
