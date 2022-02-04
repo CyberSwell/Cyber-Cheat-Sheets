@@ -17,6 +17,11 @@ netstat -peanut
 netstat -vatup 
 ```
 > Was recommended for CCDC competition. Displays udp, tcp, ports awaiting connection, and process. 
+```
+ss -pant
+```
+> Silly, provides similar functionality as netstat -vatup
+
 ## ps
 ```bash
 ps awwfux
@@ -26,6 +31,7 @@ ps awwfux
 - **f:** Show process trees
 - **u:** Display in user-oriented format
 - **x:** Remove "must-have-tty" restriction
+> Pipe to grep and search for PID's of unknown connections, rogue bash/sh processes, etc.
 
 ## iptables
 ```bash
