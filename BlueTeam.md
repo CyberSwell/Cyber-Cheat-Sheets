@@ -97,3 +97,19 @@ sudo iptables -A OUTPUT -j DROP
 sudo iptables-save
 ```
 > Saving your rules if they worked lol.
+
+## Shell Hunting
+- Use `watch` command to automate checking `ss` for new connections
+```bash
+watch -n 1 "ss -pantu | grep {host_ip} | grep 'LISTEN\|ESTAB' | grep -v {safe subnets}"
+```
+- If new connections arrise, investigate PID with `ps`. The `-B` or `-A` flag will allow you to see a couple lines before/after for context.
+```bash
+ps -awwfux | grep {PID} -B 5
+```
+
+- If process confirmed sussy, eject them. The `-9` flag for `kill` sends `KILL` instead of `TERM`, so we avoid the process installing a handler.
+
+```bash
+kill -9 {PID}
+```
