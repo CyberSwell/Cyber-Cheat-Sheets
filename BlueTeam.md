@@ -62,6 +62,36 @@ Rules:
 
 Examples:
 ```bash
-# For incoming packets (-A INPUT) from host (-s 192.168.0.1) drop them (-j DROP)
 sudo iptables -A INPUT -s 192.168.0.1 -j DROP
 ```
+> For incoming packets (-A INPUT) from host (-s 192.168.0.1) drop them (-j DROP)
+
+Rules I like:
+```bash
+sudo iptables -N UDP
+sudo iptables -N TCP
+sudo iptables -I INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+sudo iptables -I INPUT -m conntrack --ctstate INVALID -j DROP
+sudo iptables -A INPUT -p udp -m conntrack --ctstate NEW -j UDP
+sudo iptables -A INPUT -p tcp --syn -m conntrack --ctstate NEW -j TCP
+sudo iptables -I FORWARD -j DROP
+sudo iptables -I INPUT -s localhost -d localhost  -j ACCEPT
+```
+> Creates new UDP and TCP chain for easier management and sends all new UDP/TCP connections to their respective chains. Accepts all traffic related to previous connections, drops invalid/ out-of-order packets. Disables forwarding, allows loopback traffic. 
+
+```bash
+sudo iptables -I TCP -p tcp --match multiport --dports {port1,port2...} -j ACCEPT
+sudo iptables -A TCP -j DROP
+```
+> Open up firewall to a set of ports. Adds "default drop" as base case.
+
+```bash
+sudo iptables -I OUTPUT -s x.x.x.x/x -j ACCEPT
+sudo iptables -A OUTPUT -j DROP
+```
+> Allows outbound traffic to specific host/subnet, drops all other outbound traffic.
+
+```bash
+sudo iptables-save
+```
+> Saving your rules if they worked lol.
