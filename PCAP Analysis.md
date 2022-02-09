@@ -11,6 +11,9 @@ Methodologies picked up from coursework, CTF's, and forensic challenges.
   - **Filters can be created from protocols by right clicking > "Apply As Filter"**
 -  Streams for packets of interest can be analyzed by right clicking > "Follow" > "XYZ Stream"
 
+## TShark:
+
+
 ## Network Miner:
 - `Credentials` tab contains parsed login credentials for users
 - `Files` tab contains reassembled files from pcap (web pages, images, certificates)
