@@ -12,7 +12,16 @@ Methodologies picked up from coursework, CTF's, and forensic challenges.
 -  Streams for packets of interest can be analyzed by right clicking > "Follow" > "XYZ Stream"
 
 ## TShark:
-
+Basic Syntax:
+```bash
+tshark -i {interface} -f {captureFilter} -r {inFile} -w {outFile} [options] [filters]
+```
+Useful Options:
+`-T fields -e {fields}`: Specifies output format of "fields" view, fields specified with `-e`.
+  - `ip.src`: Source IP address
+  - `ip.dst`: Destination IP address
+  - `tcp.srcport`: Source TCP port
+  - `udp.dstport`: Destination UDP port
 
 ## Network Miner:
 - `Credentials` tab contains parsed login credentials for users
