@@ -15,6 +15,10 @@ nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount 192.168.0.1
 ## Web Apps:
 + <b>Check for vhost routing, modify /etc/hosts</b>
 +  Gobuster dir, dns, and vhost
++  Use ffuf for subdomain enum
+```
+ffuf -w subdomains.txt -h http://site.com/ -H "Host:FUZZ.site.com"
+```
 + <b>.php files may have .bak (backup)</b>
 + <b>RCE via PHP Unserialize</b>
 ```
