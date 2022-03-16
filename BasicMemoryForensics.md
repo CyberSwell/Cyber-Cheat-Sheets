@@ -63,11 +63,11 @@ user@kali:~$ vol.py {options} {plugin}
 - `{plugin}`: Volatility plugin to be used for analysis.
 
 ### 1.3 Volatility Workflow with plugins
-#### Obtain basic image information
+#### 1.3.1 Obtain basic image information
 `imageinfo`
 - Displays recommended volatility OS profiles, number of processors, date & time, and other important contextual information about the device.
 
-#### Discover Processes
+#### 1.3.2 Discover Processes
 `pslist`
 - Gives list of running processes
   - Process ID (PID) useful for identifying different instances of a process.
@@ -79,7 +79,7 @@ user@kali:~$ vol.py {options} {plugin}
 `psxview`
 - Enumerates potentially hidden processes, could discover processes not found with `pslist` and `pstree`.
 
-#### Examine Network Connections
+#### 1.3.3 Examine Network Connections
 `connscan`
 - Shows active TCP connections, along with associated PID.
 
@@ -89,14 +89,14 @@ user@kali:~$ vol.py {options} {plugin}
 `netscan`
 - Used for Vista and later OS profiles.
 
-#### Examine command history
+#### 1.3.4 Examine command history
 `cmdscan` and `consoles`
 - Shows history of every command entered through a console shell via two different methods. Slightly different information displayed, slightly different format.
 
 `cmdline`
 - Shows command-line arguments from history. May contain useful information, such as paths of executables or files.
 
-#### Enumerating Files/ Executables
+#### 1.3.5 Enumerating Files/ Executables
 `filescan`
 - Looks for currently open files
 
