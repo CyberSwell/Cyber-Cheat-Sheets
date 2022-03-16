@@ -5,6 +5,7 @@ Methodologies picked up from coursework, CTF's, and forensic challenges.
 ### 1.1 Download & Setup:
 <details>
   <summary>Debian-based Linux (like Kali)</summary>
+  
 #### Install system dependencies
 ```console
 user@kali:~$ sudo apt install -y build-essential git libdistorm3-dev yara libraw1394-11 libcapstone-dev capstone-tool tzdata
