@@ -55,7 +55,10 @@ user@kali:~$ . ~/.zshrc
 </details>
 
 ### 1.2 Basic Syntax
+```console
+user@kali:~$ vol.py -f {file} {plugin}
+```
 
-### 1.3 Volitility Modules w/ Examples
+### 1.3 Volitility Plugins w/ Examples
 #### imageinfo
 - Used for obtaining 
