@@ -72,8 +72,40 @@ user@kali:~$ vol.py {options} {plugin}
 - Gives list of running processes
   - Process ID (PID) useful for identifying different instances of a process.
   - Parent PID (PPID) useful for determining what processes spawned/launched other processes.
+
 `pstree`
 - Alternative to pslist, visually shows processes and subprocesses along with their PID and PPID's.
+
 `psxview`
 - Enumerates potentially hidden processes, could discover processes not found with `pslist` and `pstree`.
+
+#### Examine Network Connections
+`connscan`
+- Shows active TCP connections, along with associated PID.
+
+`sockets`
+- Shows list of open sockets (port, IP, and protocol) along with associated PID.
+
+`netscan`
+- Used for Vista and later OS profiles.
+
+#### Examine command history
+`cmdscan` and `consoles`
+- Shows history of every command entered through a console shell via two different methods. Slightly different information displayed, slightly different format.
+
+`cmdline`
+- Shows command-line arguments from history. May contain useful information, such as paths of executables or files.
+
+#### Enumerating Files/ Executables
+`filescan`
+- Looks for currently open files
+
+`shellbags`
+- Can identify files, folders, or executables/installers that have existed, even if deleted. 
+
+`procdump -p {PID} -D {outputDirectory}
+- Dumps a given process into an executable file format
+
+`memdump -p {PID} -D {outputDirectory}
+- Dumps the memory of a given process into a memory sample format
 
