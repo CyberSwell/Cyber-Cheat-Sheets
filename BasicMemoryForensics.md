@@ -103,9 +103,9 @@ user@kali:~$ vol.py {options} {plugin}
 `shellbags`
 - Can identify files, folders, or executables/installers that have existed, even if deleted. 
 
-`procdump -p {PID} -D {outputDirectory}
+`procdump -p {PID} -D {outputDirectory}`
 - Dumps a given process into an executable file format
 
-`memdump -p {PID} -D {outputDirectory}
+`memdump -p {PID} -D {outputDirectory}`
 - Dumps the memory of a given process into a memory sample format
 
