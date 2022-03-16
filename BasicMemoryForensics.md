@@ -65,11 +65,14 @@ user@kali:~$ vol.py {options} {plugin}
 ### 1.3 Volitility Plugins w/ Examples
 #### imageinfo
 - Used for obtaining basic information about the host, such as recommended volatility OS profiles, number of processors, date & time, and other important contextual information about the device.
+
 #### pslist
 - Gives list of running processes
   - Process ID (PID) useful for identifying different instances of a process.
   - Parent PID (PPID) useful for determining what processes spawned/launched other processes.
+
 #### pstree
 - Alternative to pslist, visually shows processes and subprocesses along with their PID and PPID's.
+
 #### psxview
 - Enumerates potentially hidden processes, could discover processes not found with `pslist` and `pstree`.
