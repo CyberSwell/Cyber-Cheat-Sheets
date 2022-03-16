@@ -5,7 +5,7 @@ Methodologies picked up from coursework, CTF's, and forensic challenges.
 Download (Debian-based Linux):
 Install system dependencies
 ```console
-user@kali:@$ sudo apt install -y build-essential git libdistorm3-dev yara libraw1394-11 libcapstone-dev capstone-tool tzdata
+user@kali:~$ sudo apt install -y build-essential git libdistorm3-dev yara libraw1394-11 libcapstone-dev capstone-tool tzdata
 ```
 
 
