@@ -59,7 +59,7 @@ user@kali:~$ . ~/.zshrc
 user@kali:~$ vol.py {options} {plugin}
 ```
 - `-f {dumpfile}`: specifies the dumpfile Volatility should analyze.
-- `--profile={profilename}`: Operating system profile Volatility should use to analyze. Can be obtained with the `imageinfo` plugin
+- `--profile={profilename}`: Operating system profile Volatility should use for analysis. Can be obtained with the `imageinfo` plugin
 - `{plugin}`: Volatility plugin to be used for analysis.
 
 ### 1.3 Volatility Workflow with plugins
