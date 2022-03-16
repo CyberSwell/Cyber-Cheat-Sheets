@@ -2,7 +2,7 @@
 Methodologies picked up from coursework, CTF's, and forensic challenges.
 
 ## Volatility:
-Download (Debian-based Linux):
+### Download & Setup(Debian-based Linux):
 Install system dependencies
 ```console
 user@kali:~$ sudo apt install -y build-essential git libdistorm3-dev yara libraw1394-11 libcapstone-dev capstone-tool tzdata
