@@ -4,7 +4,7 @@ Methodologies picked up from coursework, CTF's, and forensic challenges.
 ## 1. Volatility:
 ### 1.1 Download & Setup(Debian-based Linux):
 <details>
-  <summary>Step-by-step instructions for downloading and setting up Volatility( ** click to expand ** )</summary>
+  <summary>( ** click to expand ** )</summary>
 #### Install system dependencies
 ```console
 user@kali:~$ sudo apt install -y build-essential git libdistorm3-dev yara libraw1394-11 libcapstone-dev capstone-tool tzdata
