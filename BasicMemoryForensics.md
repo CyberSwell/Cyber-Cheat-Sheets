@@ -41,6 +41,7 @@ user@kali:~$ python3 -m pip install -U git+https://github.com/volatilityfoundati
 
 #### Add your user bin to PATH, so explicit path to `vol.py` does not need to be used for running program
 - Replace "$USERNAME" with your actual username
+
 Bash:
 ```console
 user@kali:~$ echo 'export PATH=/home/$USERNAME/.local/bin:$PATH' >> ~/.bashrc
