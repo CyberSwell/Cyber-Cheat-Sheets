@@ -56,8 +56,10 @@ user@kali:~$ . ~/.zshrc
 
 ### 1.2 Basic Syntax
 ```console
-user@kali:~$ vol.py -f {file} {plugin}
+user@kali:~$ vol.py {options} {plugin}
 ```
+- `-f {dumpfile}`: specifies the dumpfile Volatility should analyze.
+- `--profile={profilename}`: Operating system profile Volatility should use to analyze. Can be obtained with the `imageinfo` plugin
 
 ### 1.3 Volitility Plugins w/ Examples
 #### imageinfo
