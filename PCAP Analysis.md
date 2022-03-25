@@ -10,6 +10,7 @@ Methodologies picked up from coursework, CTF's, and forensic challenges.
   - Data streams
   - **Filters can be created from protocols by right clicking > "Apply As Filter"**
 -  Streams for packets of interest can be analyzed by right clicking > "Follow" > "XYZ Stream"
+https://www.wireshark.org/docs/man-pages/wireshark-filter.html
 
 ## TShark:
 Basic Syntax:
@@ -19,11 +20,18 @@ tshark -i {interface} -f {captureFilter} -r {inFile} -w {outFile} [options] [fil
 
 Useful Options:
 
+`-q`: Supress pcap output when reading a pcap
+
 `-T fields -e {fields}`: Specifies output format of "fields" view, fields specified with `-e`.
   - `ip.src`: Source IP address
   - `ip.dst`: Destination IP address
   - `tcp.srcport`: Source TCP port
   - `udp.dstport`: Destination UDP port
+
+` -z <statistic>`: Summary statistics for PCAP
+  - `-z endpoints,type[,filter]`: List endpoints by type (ex: ip, eth)
+  - `-z ip_hosts,tree`: List all ip endpoints and number of times occurred in PCAP.
+    - Can also use `ip_srcdst` to split up source and destination IP's
 
 ## Network Miner:
 - `Credentials` tab contains parsed login credentials for users
