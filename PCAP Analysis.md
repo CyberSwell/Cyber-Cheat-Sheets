@@ -13,6 +13,7 @@ Methodologies picked up from coursework, CTF's, and forensic challenges.
 https://www.wireshark.org/docs/man-pages/wireshark-filter.html
 
 ## TShark:
+Tshark man page - https://www.wireshark.org/docs/man-pages/tshark.html
 Basic Syntax:
 ```bash
 tshark -i {interface} -f {captureFilter} -r {inFile} -w {outFile} [options] [filters]
