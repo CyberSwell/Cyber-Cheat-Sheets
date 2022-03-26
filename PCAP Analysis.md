@@ -16,6 +16,7 @@ https://www.wireshark.org/docs/man-pages/wireshark-filter.html
 Tshark man page - https://www.wireshark.org/docs/man-pages/tshark.html
 
 Pcap Summary:
+Use `capinfos`, which is installed alongside tshark.
 ```console
 foo@bar:~$ capinfos file.pcap
 File name:           file.pcap
