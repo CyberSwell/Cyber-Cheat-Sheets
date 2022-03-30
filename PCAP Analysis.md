@@ -64,6 +64,15 @@ install -pDm644 pcapfix.1 /usr/share/man/man1/pcapfix.1
   
 </details>
 
+
+<details>
+  <summary>Instructions to install standalone Windows exe:</summary>
+  LMAO LMAO
+  
+  🤡🤡🤡🤡
+</details>
+
+
 Usage:
 ```console
 foo@bar:~$ pcapfix -o {outfile} broken.pcap
@@ -84,12 +93,6 @@ pcapfix 1.1.7 (c) 2012-2021 Robert Krause
 [*] Wrote 1577883 packets to file.
 [+] SUCCESS: {NUM} Corruption(s) fixed!
 ```
-
-<details>
-  <summary>Instructions to install standalone Windows exe:</summary>
-  LMAO LMAO
-  🤡🤡🤡🤡
-</details>
 
 ### Capinfos:
 https://www.wireshark.org/docs/man-pages/capinfos.html
