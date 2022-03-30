@@ -34,7 +34,7 @@ Why does this happen? Man idk. How does pcapfix repair it? Also wizardry to me. 
 
 Installation:
 <details>
-  <summary>Install (.tar.gz for Linux):</summary>
+  <summary>Instructions to install via .tar.gz for Linux:</summary>
   
 1. Download from https://f00l.de/pcapfix/
   
