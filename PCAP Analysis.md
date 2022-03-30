@@ -12,11 +12,10 @@ Methodologies picked up from coursework, CTF's, and forensic challenges.
 -  Streams for packets of interest can be analyzed by right clicking > "Follow" > "XYZ Stream"
 https://www.wireshark.org/docs/man-pages/wireshark-filter.html
 
-## TShark:
-Tshark man page - https://www.wireshark.org/docs/man-pages/tshark.html
+## Capinfos:
+CLI utility that can provide summary statistics/ information about PCAP, such as size, number of packets, start/end times, etc.
+https://www.wireshark.org/docs/man-pages/capinfos.html
 
-Pcap Summary:
-Use `capinfos`, which is installed alongside tshark.
 ```console
 foo@bar:~$ capinfos file.pcap
 File name:           file.pcap
@@ -33,6 +32,18 @@ Last packet time:    ...
 ...
 ```
 
+## Mergecap:
+Part of wireshark-common (should be installed alongside wireshark and tshark). Able to merge multiple PCAPs into a single PCAP while preserving frame timestamps. 
+https://www.wireshark.org/docs/man-pages/mergecap.html
+
+```console
+foo@bar:~$ mergecap -w full.pcap part1.pcap part2.pcap part3.pcap...
+
+
+```
+
+## TShark:
+Tshark man page - https://www.wireshark.org/docs/man-pages/tshark.html
 
 Basic Syntax:
 ```bash
