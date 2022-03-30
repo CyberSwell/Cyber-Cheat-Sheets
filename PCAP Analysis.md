@@ -57,7 +57,7 @@ foo@bar:~$ tshark -i {interface} -f {captureFilter} -r {inFile} -w {outFile} [op
 
 Useful Options:
 
-`-q`: Supress pcap output when reading a pcap
+`-q`: Supress pcap output when reading a pcap (should almost always be used when using tshark to do analysis)
 
 `-T fields -e {fields}`: Specifies output format of "fields" view, fields specified with `-e`.
   - `ip.src`: Source IP address
