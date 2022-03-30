@@ -68,7 +68,7 @@ install -pDm644 pcapfix.1 /usr/share/man/man1/pcapfix.1
 <details>
   <summary>Standalone Windows exe:</summary>
   
-  # 🤡LMAO sike🤡. Learn to CLI
+  # 🤡LMAO sike🤡
 
 </details>
 
