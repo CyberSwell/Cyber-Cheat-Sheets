@@ -20,6 +20,51 @@ Filters: https://www.wireshark.org/docs/man-pages/wireshark-filter.html
 - `Files` tab contains reassembled files from pcap (web pages, images, certificates)
 
 ## **CLI TOOLS**
+
+### Pcapfix:
+Occasionally, I have received pcaps that appeared "broken or corrupt" due to packets having outrageous lengths, noticed with the following error when attempting to open up the PCAP with any utility:
+
+```
+An error occurred after reading xyz packets from "{FILE}".
+{UTILITY}: The file "{FILE}" appears to be damaged or corrupt.
+(pcap: File has {HUGENUMBER}-byte packet, bigger than maximum of 262144)
+```
+
+Why does this happen? Man idk. How does pcapfix repair it? Also wizardry to me. Maybe one day I'll update this section once I understand.
+
+Installation:
+<details>
+  <summary>Install (.tar.gz for Linux):</summary>
+1. Download from https://f00l.de/pcapfix/
+2. Unzip the .tar.gz
+```console
+foo@bar:~$ tar -xzvf pcapfix-1.1.7.tar.gz
+pcapfix-1.1.7/
+pcapfix-1.1.7/pcapfix.h
+pcapfix-1.1.7/Makefile
+.
+.
+.
+```
+3. Compile & install the binary
+```console
+foo@bar:~$ make
+cc   -D_FORTIFY_SOURCE=2 -O2 -fstack-protector --param=ssp-buffer-size=4 -Wall -Wextra -std=gnu99 -pedantic -Wformat -Werror=format-security -g -c pcap.c -o pcap.o
+cc   -D_FORTIFY_SOURCE=2 -O2 -fstack-protector --param=ssp-buffer-size=4 -Wall -Wextra -std=gnu99 -pedantic -Wformat -Werror=format-security -g -c pcap_kuznet.c -o pcap_kuznet.o
+cc   -D_FORTIFY_SOURCE=2 -O2 -fstack-protector --param=ssp-buffer-size=4 -Wall -Wextra -std=gnu99 -pedantic -Wformat -Werror=format-security -g -c pcapng.c -o pcapng.occ   -D_FORTIFY_SOURCE=2 -O2 -fstack-protector --param=ssp-buffer-size=4 -Wall -Wextra -std=gnu99 -pedantic -Wformat -Werror=format-security -g -Wl,-z,relro pcapfix.c pcap.o pcap_kuznet.o pcapng.o -o pcapfix
+foo@bar:~$ sudo make install
+[sudo] password for foo:
+install -pDm755 pcapfix /usr/bin/pcapfix
+install -pDm644 pcapfix.1 /usr/share/man/man1/pcapfix.1
+```
+</details>
+
+Usage:
+```console
+foo@bar:~$ pcapfix -o {outfile} broken.pcap
+```
+
+
 ### Capinfos:
 https://www.wireshark.org/docs/man-pages/capinfos.html
 
