@@ -2,6 +2,9 @@
 Methodologies picked up from coursework, CTF's, and forensic challenges.
 ## **GUI TOOLS**
 ### Wireshark:
+
+Filters: https://www.wireshark.org/docs/man-pages/wireshark-filter.html
+
 - `Statistics > Capture File Properties`
   - Time elapsed, number of packets, and capture host information
 - `Statistics > Protocol Hierarchy`
@@ -10,7 +13,7 @@ Methodologies picked up from coursework, CTF's, and forensic challenges.
   - Data streams
   - **Filters can be created from protocols by right clicking > "Apply As Filter"**
 -  Streams for packets of interest can be analyzed by right clicking > "Follow" > "XYZ Stream"
-https://www.wireshark.org/docs/man-pages/wireshark-filter.html
+
 
 ### Network Miner:
 - `Credentials` tab contains parsed login credentials for users
