@@ -34,7 +34,7 @@ Why does this happen? Man idk. How does pcapfix repair it? Also wizardry to me. 
 
 Installation:
 <details>
-  <summary>via .tar.gz for Linux:</summary>
+  <summary>Via .tar.gz for Linux:</summary>
   
 1. Download from https://f00l.de/pcapfix/
   
@@ -66,9 +66,10 @@ install -pDm644 pcapfix.1 /usr/share/man/man1/pcapfix.1
 
 
 <details>
-  <summary>standalone Windows exe:</summary>
+  <summary>Standalone Windows exe:</summary>
   
   # 🤡LMAO sike🤡
+  Learn to CLI
 
 </details>
 
