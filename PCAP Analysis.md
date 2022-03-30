@@ -14,6 +14,7 @@ https://www.wireshark.org/docs/man-pages/wireshark-filter.html
 
 ## Capinfos:
 https://www.wireshark.org/docs/man-pages/capinfos.html
+
 CLI utility that can provide summary statistics/ information about PCAP, such as size, number of packets, start/end times, etc.
 
 ```console
@@ -34,6 +35,7 @@ Last packet time:    ...
 
 ## Mergecap:
 https://www.wireshark.org/docs/man-pages/mergecap.html
+
 Part of wireshark-common (should be installed alongside wireshark and tshark). Able to merge multiple PCAPs into a single PCAP while preserving frame timestamps. 
 
 ```console
