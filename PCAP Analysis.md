@@ -30,7 +30,7 @@ An error occurred after reading xyz packets from "{FILE}".
 (pcap: File has {HUGENUMBER}-byte packet, bigger than maximum of 262144)
 ```
 
-Why does this happen? Man idk. How does pcapfix repair it? Also wizardry to me. Maybe one day I'll update this section once I understand.
+Why does this happen? Man idk. How does pcapfix repair it? Also wizardry to me. Maybe one day when I'm older I can update this.
 
 Installation:
 <details>
