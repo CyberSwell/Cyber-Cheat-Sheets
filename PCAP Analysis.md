@@ -85,6 +85,11 @@ pcapfix 1.1.7 (c) 2012-2021 Robert Krause
 [+] SUCCESS: {NUM} Corruption(s) fixed!
 ```
 
+<details>
+  <summary>Instructions to install standalone Windows exe:</summary>
+  LMAO LMAO
+  🤡🤡🤡🤡
+</details>
 
 ### Capinfos:
 https://www.wireshark.org/docs/man-pages/capinfos.html
