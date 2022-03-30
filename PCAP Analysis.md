@@ -72,8 +72,9 @@ pcapfix 1.1.7 (c) 2012-2021 Robert Krause
 [*] Reading from file: broken.pcap
 [*] Writing to file: {outfile}
 [*] File size: ...
-.
-.
+[+] This is a PCAP file.
+[*] Analyzing Global Header...
+[+] The global pcap header seems to be fine!
 [*] Analyzing packets...
 [*] Progress:  20.00 %
 [*] Progress:  40.00 %
