@@ -67,6 +67,21 @@ install -pDm644 pcapfix.1 /usr/share/man/man1/pcapfix.1
 Usage:
 ```console
 foo@bar:~$ pcapfix -o {outfile} broken.pcap
+pcapfix 1.1.7 (c) 2012-2021 Robert Krause
+
+[*] Reading from file: broken.pcap
+[*] Writing to file: {outfile}
+[*] File size: ...
+.
+.
+[*] Analyzing packets...
+[*] Progress:  20.00 %
+[*] Progress:  40.00 %
+[*] Progress:  60.00 %
+[*] Progress:  80.00 %
+[*] Progress: 100.00 %
+[*] Wrote 1577883 packets to file.
+[+] SUCCESS: {NUM} Corruption(s) fixed!
 ```
 
 
