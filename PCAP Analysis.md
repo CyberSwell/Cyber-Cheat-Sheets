@@ -1,7 +1,7 @@
 # PCAP Analysis Techniques
 Methodologies picked up from coursework, CTF's, and forensic challenges.
-
-## Wireshark:
+## **GUI TOOLS**
+### Wireshark:
 - `Statistics > Capture File Properties`
   - Time elapsed, number of packets, and capture host information
 - `Statistics > Protocol Hierarchy`
@@ -12,7 +12,12 @@ Methodologies picked up from coursework, CTF's, and forensic challenges.
 -  Streams for packets of interest can be analyzed by right clicking > "Follow" > "XYZ Stream"
 https://www.wireshark.org/docs/man-pages/wireshark-filter.html
 
-## Capinfos:
+### Network Miner:
+- `Credentials` tab contains parsed login credentials for users
+- `Files` tab contains reassembled files from pcap (web pages, images, certificates)
+
+## **CLI TOOLS**
+### Capinfos:
 https://www.wireshark.org/docs/man-pages/capinfos.html
 
 CLI utility that can provide summary statistics/ information about PCAP, such as size, number of packets, start/end times, etc.
@@ -33,7 +38,7 @@ Last packet time:    ...
 ...
 ```
 
-## Mergecap:
+### Mergecap:
 https://www.wireshark.org/docs/man-pages/mergecap.html
 
 Part of wireshark-common (should be installed alongside wireshark and tshark). Able to merge multiple PCAPs into a single PCAP while preserving frame timestamps. 
@@ -44,7 +49,7 @@ foo@bar:~$ mergecap -w full.pcap part1.pcap part2.pcap part3.pcap...
 
 ```
 
-## TShark:
+### TShark:
 https://www.wireshark.org/docs/man-pages/tshark.html
 
 Basic Syntax:
@@ -67,6 +72,4 @@ Useful Options:
   - `-z ip_hosts,tree`: List all ip endpoints and number of times occurred in PCAP.
     - Can also use `ip_srcdst` to split up source and destination IP's
 
-## Network Miner:
-- `Credentials` tab contains parsed login credentials for users
-- `Files` tab contains reassembled files from pcap (web pages, images, certificates)
+
