@@ -35,7 +35,9 @@ Why does this happen? Man idk. How does pcapfix repair it? Also wizardry to me. 
 Installation:
 <details>
   <summary>Install (.tar.gz for Linux):</summary>
+  
 1. Download from https://f00l.de/pcapfix/
+  
 2. Unzip the .tar.gz
 ```console
 foo@bar:~$ tar -xzvf pcapfix-1.1.7.tar.gz
@@ -46,7 +48,9 @@ pcapfix-1.1.7/Makefile
 .
 .
 ```
+  
 3. Compile & install the binary
+  
 ```console
 foo@bar:~$ make
 cc   -D_FORTIFY_SOURCE=2 -O2 -fstack-protector --param=ssp-buffer-size=4 -Wall -Wextra -std=gnu99 -pedantic -Wformat -Werror=format-security -g -c pcap.c -o pcap.o
@@ -57,6 +61,7 @@ foo@bar:~$ sudo make install
 install -pDm755 pcapfix /usr/bin/pcapfix
 install -pDm644 pcapfix.1 /usr/share/man/man1/pcapfix.1
 ```
+  
 </details>
 
 Usage:
