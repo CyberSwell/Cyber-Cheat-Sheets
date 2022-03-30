@@ -45,16 +45,14 @@ Part of wireshark-common (should be installed alongside wireshark and tshark). A
 
 ```console
 foo@bar:~$ mergecap -w full.pcap part1.pcap part2.pcap part3.pcap...
-
-
 ```
 
 ### TShark:
 https://www.wireshark.org/docs/man-pages/tshark.html
 
 Basic Syntax:
-```bash
-tshark -i {interface} -f {captureFilter} -r {inFile} -w {outFile} [options] [filters]
+```console
+foo@bar:~$ tshark -i {interface} -f {captureFilter} -r {inFile} -w {outFile} [options] [filters]
 ```
 
 Useful Options:
