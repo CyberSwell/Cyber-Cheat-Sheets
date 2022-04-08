@@ -147,5 +147,5 @@ Useful Options:
   - `-z endpoints,type[,filter]`: List endpoints by type (ex: ip, eth)
   - `-z ip_hosts,tree`: List all ip endpoints and number of times occurred in PCAP.
     - Can also use `ip_srcdst` to split up source and destination IP's, or `dests` to return all TCP/UDP ports per IP.
-
+  - ` -z conv,tcp`: very useful to get a list of conversations between hosts and their respective src & dst IP's and ports 
 
