@@ -130,7 +130,7 @@ https://www.wireshark.org/docs/man-pages/tshark.html
 
 Basic Syntax:
 ```console
-foo@bar:~$ tshark -i {interface} -f {captureFilter} -r {inFile} -w {outFile} [options] [filters]
+foo@bar:~$ tshark -i {interface} -f {captureFilter} -r {inFile} -Y {display filters} -w {outFile} [options]
 ```
 
 Useful Options:
