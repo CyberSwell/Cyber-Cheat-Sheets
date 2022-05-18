@@ -424,7 +424,17 @@ Repeater:
   
   
 ## 1. Information Gathering
-### 1.1 OSINT
+### 1.1 OSINT & Manual Discovery
+Goals:
+- Discover web content & frameworks
+
+Techniques:
+- Robots.txt
+  - May contain subdomains/resources intentionally hidden from web crawlers
+- Sitemap.xml
+  - Contains XML layout of all resources in the site that are crawlable
+- Favicon.ico: 
+  - Link to image can be found from viewing page source, curl and pipe to md5sum and cross-reference with https://wiki.owasp.org/index.php/OWASP_favicon_database to find web framework (if one is in use).
 
 ### 1.2 Subdomain Enumeration
 Goals:
