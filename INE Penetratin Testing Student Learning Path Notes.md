@@ -424,7 +424,7 @@ Repeater:
   
   
 ## 1. Information Gathering
-### 1.1 OSINT & Manual Discovery
+### 1.1 OSINT & Manual Web Content Discovery
 Goals:
 - Discover web content & frameworks
 
