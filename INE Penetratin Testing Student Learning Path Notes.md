@@ -442,7 +442,7 @@ Goals:
 
 Passive Techniques:
 - Google Dorking
-  - ```site: domain.com```
+  - ```site:*.domain.com```
 - Websites:
   - ```dnsdumpster.com```, ```crt.sh```
 - Sublist3r
@@ -452,6 +452,10 @@ Passive Techniques:
 - "Certificate Subject Alt Name" field of SSL Certificate
 
 Active Techniques
+- Dnsrecon
+  ``` bash
+  dnsrecon -d domain.com -D dictionaryFile
+  ```
 - Gobuster
   ``` bash
   gobuster dir -u [url] -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt
