@@ -467,7 +467,11 @@ Active Techniques
   snapd install amass
   amass
   ```
-  
+- Ffuf
+  ``` bash
+  ffuf -w [wordlist] -H "Host:FUZZ.domain.com" -u [URL] -fs [sizeToFilterOut]
+  ```
+	
 ## 2. Footprinting & Scanning
 ### 2.1 Mapping Networks
 Goals:
